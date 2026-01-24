@@ -1,27 +1,8 @@
-# 🔐 CYNA SaaS Platform
+# 📂 CYNA - Documentation
 
-> Plateforme e-commerce SaaS dédiée aux solutions de cybersécurité **SOC · EDR · XDR**
+Cette branche contient tous les documents de conception et de gestion du projet.
 
-## ✨ Objectif
-
-Développer une application **mobile-first**, moderne et sécurisée, permettant l’achat et la gestion d’abonnements SaaS, avec un **back-office administrateur**.
-
-## 🖥️ Front & UX
-
-- Interface responsive (web & mobile)
-- Design moderne orienté UX/UI
-- Navigation fluide et recherche avancée
-- Expérience utilisateur optimisée
-
-## ⚙️ Fonctionnalités
-
-- Catalogue de services SaaS
-- Panier & paiement sécurisé
-- Gestion des abonnements
-- Back-office admin
-
-## 👨‍💻 Équipe
-
-**Hassani Isaac** · **Ilane Mac-luckie** · **Arnaud Nathan** · **Delhem Mohamed-Amine**
-
-Projet académique — SUP DE VINCI
+### 📁 Contenu de la branche :
+* **`/note-de-cadrage`** : Objectifs, planning et périmètre du projet.
+* **`/sujet-projet`** : Enoncé officiel et contraintes techniques.
+* **`/documentation-stripe`** : Ressources pour l'intégration du paiement.
