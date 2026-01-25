@@ -25,4 +25,4 @@ Développer une application **mobile-first**, moderne et sécurisée, permettant
 
 **Hassani Isaac** · **Ilane Mac-luckie** · **Arnaud Nathan** · **Delhem Mohamed-Amine**
 
-Projet académique — SUP DE VINCI
+Projet académique — SUP DE VINCI -- Institut Limayrac
