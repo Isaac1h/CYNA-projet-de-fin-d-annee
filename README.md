@@ -19,6 +19,7 @@ Développer une application **mobile-first**, moderne et sécurisée, permettant
 - Panier & paiement sécurisé
 - Gestion des abonnements
 - Back-office admin
+- Chatbot et formulaire de contact
 
 ## 👨‍💻 Équipe
 
