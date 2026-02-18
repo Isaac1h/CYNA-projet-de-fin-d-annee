@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Dark Theme by default */
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 6.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 246 61% 33%; /* #2B2086 */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 246 61% 33%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* ANO-009 — Focus clavier visible (WCAG 2.1 SC 2.4.7).
+ *
+ * Règle posée HORS @layer pour gagner la cascade contre les utilities
+ * Tailwind `focus:outline-none` éparpillées dans le codebase (qui ciblent
+ * `:focus` et seraient prioritaires en cas d'égalité de spécificité
+ * sinon). `:focus-visible` ne s'active que sur navigation clavier ou
+ * lecteur d'écran — pas sur clic souris/tactile — donc on reste neutre
+ * pour la navigation pointeur.
+ *
+ * Couleur = la variable `--ring` du design system (primary par défaut).
+ * Offset 2px pour ne pas chevaucher les bordures internes des inputs ;
+ * border-radius hérité pour épouser les boutons/inputs arrondis.
+ */
+*:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+  border-radius: var(--radius);
+}
