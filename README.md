@@ -30,11 +30,10 @@ Créer une application **moderne, mobile-first et sécurisée** permettant :
 
 ## 🛠️ Gestion de projet
 
-- 📌 **Trello (méthode Agile – Story Points)**  
-  https://trello.com/invite/b/697901026ba0b871320d614e/ATTIac800eb06b9a56670694384b13c312cf24DF3A63/cyna-sprint-1  
-
-- 🎨 **Maquette Figma**  
-  https://www.figma.com/design/VRWyjpPGw2M20zo5hhcQj2/CYNA---MAQUETTE-FIGMA?node-id=0-1&t=m5HoRuQZPI8UCB1g-1  
+- **Trello** : suivi des tâches avec système de **Story Points** (méthode Agile)  
+  📌 [Lien Trello](https://trello.com/invite/b/697901026ba0b871320d614e/ATTIac800eb06b9a56670694384b13c312cf24DF3A63/cyna-sprint-1)
+- **Maquette Figma** : prototype interactif du projet  
+  📌 [Lien Figma](https://www.figma.com/design/VRWyjpPGw2M20zo5hhcQj2/CYNA---MAQUETTE-FIGMA?node-id=0-1&t=m5HoRuQZPI8UCB1g-1)
 
 ---
 
