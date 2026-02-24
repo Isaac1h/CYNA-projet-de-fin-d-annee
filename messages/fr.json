@@ -1,0 +1,832 @@
+{
+  "common": {
+    "loading": "Chargement…",
+    "close": "Fermer",
+    "language": "Langue",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent"
+  },
+  "nav": {
+    "primaryNav": "Navigation principale",
+    "mobileNav": "Navigation mobile",
+    "home": "Accueil",
+    "catalogue": "Catalogue",
+    "tools": "Outils",
+    "search": "Rechercher",
+    "searchPlaceholder": "Rechercher des produits...",
+    "searchPlaceholderShort": "Rechercher...",
+    "cart": "Panier",
+    "cartLabel": "Panier",
+    "userMenu": "Menu utilisateur",
+    "userDefault": "Utilisateur",
+    "myAccount": "Mon Compte",
+    "myAccountShort": "Mon compte",
+    "myOrders": "Mes commandes",
+    "orders": "Historique des Commandes",
+    "admin": "Admin",
+    "login": "Se connecter",
+    "loginRegister": "Connexion / Inscription",
+    "register": "S'inscrire",
+    "logout": "Déconnexion",
+    "menuOpen": "Ouvrir le menu",
+    "menuClose": "Fermer le menu",
+    "cgu": "CGU",
+    "mentionsLegales": "Mentions légales",
+    "contact": "Contact",
+    "about": "À propos de Cyna"
+  },
+  "home": {
+    "heroAriaLabel": "Carrousel d'accueil",
+    "heroCtaFallback": "Commencer",
+    "prevSlide": "Slide précédent",
+    "nextSlide": "Slide suivant",
+    "goToSlide": "Aller au slide {index}",
+    "partner": {
+      "title": "Partenaire de Sécurité de Confiance",
+      "subtitle": "Cyna fournit des solutions de cybersécurité de pointe pour protéger votre organisation contre les menaces évolutives. Notre plateforme complète combine SOC, EDR, XDR et renseignement sur les menaces.",
+      "features": {
+        "protection": {
+          "title": "Protection 24/7",
+          "description": "Surveillance et réponse aux incidents en continu"
+        },
+        "ai": {
+          "title": "Propulsé par IA",
+          "description": "Détection des menaces par apprentissage automatique"
+        },
+        "scalable": {
+          "title": "Évolutif",
+          "description": "Grandit avec les besoins de votre organisation"
+        },
+        "expertSupport": {
+          "title": "Support Expert",
+          "description": "Analystes de sécurité et équipe support dédiés"
+        }
+      }
+    },
+    "editorialAriaLabel": "Contenu éditorial",
+    "categories": {
+      "title": "Catégories de Sécurité"
+    },
+    "topProducts": {
+      "title": "Produits Populaires",
+      "viewAll": "Voir Tout"
+    }
+  },
+  "footer": {
+    "tagline": "Votre partenaire de confiance pour les solutions de sécurité d'entreprise. Protection des organisations avec des plateformes SOC, EDR, XDR et de renseignement sur les menaces de pointe.",
+    "quickLinks": "Liens Rapides",
+    "legal": "Légal",
+    "linkHome": "Accueil",
+    "linkCatalogue": "Catalogue",
+    "linkTools": "Outils",
+    "linkContact": "Contact",
+    "linkAbout": "À propos",
+    "linkMentionsLegales": "Mentions légales",
+    "linkConfidentialite": "Politique de confidentialité",
+    "linkCgu": "Conditions générales",
+    "copyright": "© {year} Cyna. Tous droits réservés."
+  },
+  "cookieConsent": {
+    "title": "Cookies & confidentialité",
+    "body": "Nous mémorisons votre choix dans votre navigateur (stockage local) afin de ne plus vous afficher ce bandeau. Avec votre consentement, nous mesurons l'audience du site via Plausible — anonyme, sans cookie, données agrégées. Refuser laisse le site 100 % non tracké.",
+    "learnMore": "En savoir plus dans la politique de confidentialité.",
+    "reject": "Tout refuser",
+    "accept": "Tout accepter"
+  },
+  "chatbot": {
+    "title": "Assistant Cyna",
+    "triggerOpen": "Ouvrir l'assistant Cyna",
+    "triggerClose": "Fermer la fenêtre de discussion",
+    "closeDialog": "Fermer la fenêtre de discussion",
+    "greeting": "Bonjour ! Je suis l'assistant Cyna. Choisissez une question ci-dessous ou tapez la vôtre — pour tout le reste je vous orienterai vers notre support.",
+    "escalationMessage": "Je n'ai pas la réponse à cette question. Souhaitez-vous contacter notre support ?",
+    "contactSupport": "Contacter le support",
+    "srUserPrefix": "Vous : ",
+    "srBotPrefix": "Assistant : ",
+    "faqLabel": "Questions fréquentes :",
+    "inputPlaceholder": "Tapez votre question…",
+    "inputLabel": "Votre question",
+    "sendLabel": "Envoyer le message"
+  },
+  "productCard": {
+    "stock": {
+      "inStock": "En Stock",
+      "limited": "Limité",
+      "outOfStock": "Rupture de Stock"
+    },
+    "monthly": "Mensuel",
+    "annual": "Annuel",
+    "pricePerMonth": "{price} €/mois",
+    "pricePerYear": "{price} €/an",
+    "viewDetails": "Voir Détails"
+  },
+  "catalogue": {
+    "headingAll": "Catalogue des solutions",
+    "headingWithCategory": "Catalogue — {category}",
+    "subtitle": "Explorez la gamme Cyna et filtrez par catégorie, disponibilité ou mots-clés. Les résultats sont triés par priorité puis par disponibilité par défaut.",
+    "resultsAriaLabel": "Résultats du catalogue",
+    "paginationAriaLabel": "Pagination du catalogue",
+    "noResults": {
+      "title": "Aucun résultat",
+      "helper": "Ajustez vos filtres ou tentez une autre recherche pour découvrir nos solutions."
+    },
+    "pageStatus": "Page {current} sur {total} · {count, plural, =0 {aucun produit} =1 {1 produit} other {# produits}} au total",
+    "filters": {
+      "sectionAria": "Filtres du catalogue",
+      "searchLabel": "Rechercher un produit",
+      "searchPlaceholder": "Rechercher un produit, une fonctionnalité...",
+      "searchClear": "Effacer la recherche",
+      "searchSubmit": "Rechercher",
+      "category": "Catégorie",
+      "categoryAll": "Toutes les catégories",
+      "stock": "Disponibilité",
+      "stockAll": "Toutes disponibilités",
+      "stockInStock": "En Stock",
+      "stockLimited": "Limité",
+      "stockOutOfStock": "Rupture de Stock",
+      "sort": "Trier par",
+      "sortDefault": "Priorité puis disponibilité",
+      "sortAvailability": "Disponibilité",
+      "sortPriceAsc": "Prix croissant",
+      "sortPriceDesc": "Prix décroissant",
+      "sortName": "Ordre alphabétique",
+      "reset": "Réinitialiser les filtres",
+      "matchStatus": "{count, plural, =0 {Aucun produit ne correspond à votre recherche.} =1 {1 produit affiché.} other {# produits affichés.}}"
+    }
+  },
+  "product": {
+    "notFoundTitle": "Produit introuvable — Cyna",
+    "breadcrumbAria": "Fil d'Ariane",
+    "backToCategory": "Retour à {category}",
+    "backToCatalogue": "Retour au catalogue",
+    "stockLabel": {
+      "inStock": "Disponible immédiatement",
+      "limited": "Disponible (capacité limitée)",
+      "outOfStock": "Service indisponible"
+    },
+    "availabilityAria": "Disponibilité : {label}",
+    "specsHeading": "Spécifications techniques",
+    "similarHeading": "Services similaires",
+    "carousel": {
+      "regionAria": "Galerie d'images du produit",
+      "regionAriaEmpty": "Aucune image disponible pour ce produit",
+      "prev": "Image précédente",
+      "next": "Image suivante",
+      "dotsAria": "Choisir une image",
+      "dotAria": "Afficher l'image {index} sur {total}"
+    },
+    "purchase": {
+      "tabsAria": "Plans tarifaires",
+      "tabMonthly": "Mensuel",
+      "tabAnnual": "Annuel",
+      "tabPerUser": "Par utilisateur",
+      "priceMonthly": "{price} €",
+      "priceAnnual": "{price} €",
+      "pricePerUser": "{price} €",
+      "priceLabelMonthly": "/mois",
+      "priceLabelAnnual": "/an",
+      "priceLabelPerUser": "/utilisateur/mois",
+      "saveAnnual": "Économisez 17% annuellement",
+      "flexPerUser": "Prix flexible pour toute taille d'équipe",
+      "subscribe": "S'abonner",
+      "alreadyInCart": "Déjà dans le panier",
+      "outOfStockCta": "Service indisponible",
+      "requestDemo": "Demander une démo",
+      "demoToastTitle": "Demande de démo envoyée",
+      "demoToastDescription": "Notre équipe commerciale vous contactera dans les 24 heures."
+    }
+  },
+  "category": {
+    "notFoundTitle": "Catégorie introuvable — Cyna",
+    "backToCatalogue": "Retour au catalogue",
+    "productsSection": "Produits de la catégorie {name}",
+    "presentationSection": "Présentation de la catégorie {name}",
+    "productCount": "{count, plural, =0 {Aucun produit disponible} =1 {1 produit disponible} other {# produits disponibles}}",
+    "sortedByPriority": "Triés par priorité puis disponibilité",
+    "empty": {
+      "title": "Aucun produit dans cette catégorie pour le moment",
+      "hint": "Revenez plus tard ou explorez le",
+      "hintLink": "catalogue complet"
+    }
+  },
+  "search": {
+    "resultCount": "{count, plural, =0 {Aucun résultat} =1 {1 résultat} other {# résultats}}",
+    "resultCountWithQuery": "{count, plural, =0 {Aucun résultat} =1 {1 résultat} other {# résultats}} pour « {query} »",
+    "subtitle": "Affinez votre recherche avec les filtres ci-après. Les paramètres sont conservés dans l'URL pour partage et navigation.",
+    "filtersAriaLabel": "Filtres de recherche",
+    "resultsAriaLabel": "Résultats de la recherche",
+    "paginationAriaLabel": "Pagination des résultats de recherche",
+    "pageStatus": "Page {current} sur {total} · {count, plural, =0 {aucun résultat} =1 {1 résultat} other {# résultats}} au total",
+    "noResults": {
+      "title": "Aucun résultat",
+      "helper": "Élargissez vos filtres ou tentez une autre recherche pour trouver une solution Cyna."
+    },
+    "filters": {
+      "searchLabel": "Rechercher dans le catalogue",
+      "searchPlaceholder": "Rechercher un produit, une fonctionnalité…",
+      "searchClear": "Effacer la recherche",
+      "heading": "Filtres",
+      "categories": "Catégories",
+      "availability": "Disponibilité",
+      "stockInStock": "En Stock",
+      "stockLimited": "Limité",
+      "stockOutOfStock": "Rupture de Stock",
+      "priceHeading": "Prix mensuel (€)",
+      "priceMin": "Minimum",
+      "priceMax": "Maximum",
+      "sort": "Trier par",
+      "sortDefault": "Pertinence",
+      "sortPriceAsc": "Prix croissant",
+      "sortPriceDesc": "Prix décroissant",
+      "sortNewest": "Plus récents",
+      "sortName": "Ordre alphabétique",
+      "reset": "Réinitialiser les filtres",
+      "matchStatus": "{count, plural, =0 {Aucun produit ne correspond à vos critères.} =1 {1 résultat.} other {# résultats.}}"
+    }
+  },
+  "pagination": {
+    "ariaLabel": "Pagination",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "prevAria": "Page précédente",
+    "prevAriaDisabled": "Page précédente (désactivée)",
+    "nextAria": "Page suivante",
+    "nextAriaDisabled": "Page suivante (désactivée)",
+    "pageAria": "Page {page}",
+    "pageAriaCurrent": "Page {page} (page courante)",
+    "morePages": "Pages supplémentaires"
+  },
+  "cart": {
+    "pageTitle": "Panier — Cyna",
+    "pageDescription": "Vérifiez les solutions Cyna sélectionnées avant de procéder au paiement.",
+    "heading": "Panier",
+    "clear": "Vider le panier",
+    "articlesAria": "Articles du panier",
+    "summaryAria": "Récapitulatif de commande",
+    "summary": "Récapitulatif",
+    "subtotal": "Sous-total",
+    "taxes": "Taxes",
+    "taxesValue": "Calculées au paiement",
+    "totalEstimate": "Total estimé",
+    "totalHint": "Montant indicatif. Le total définitif sera confirmé à l'étape de paiement.",
+    "notSignedInMsg": "Connectez-vous pour sauvegarder votre panier.",
+    "signIn": "Connexion",
+    "signUp": "Inscription",
+    "checkoutCtaAuthed": "Passer au paiement",
+    "checkoutCtaGuest": "Se connecter pour payer",
+    "continueShopping": "Continuer mes achats",
+    "skeletonSr": "Chargement du panier…",
+    "empty": {
+      "heading": "Votre panier est vide",
+      "hint": "Commencez à explorer le catalogue Cyna pour ajouter une solution à votre panier.",
+      "browse": "Parcourir le catalogue"
+    },
+    "line": {
+      "duration": "Durée",
+      "quantity": "Quantité",
+      "lineSubtotal": "Sous-total ligne",
+      "articleAria": "Article : {name}",
+      "removeAria": "Retirer {name} du panier",
+      "increaseAria": "Augmenter la quantité de {name}",
+      "decreaseAria": "Diminuer la quantité de {name}",
+      "durationLabel": {
+        "monthly": "Mensuel",
+        "annual": "Annuel",
+        "per_user": "Par utilisateur"
+      },
+      "durationSuffix": {
+        "monthly": "/mois",
+        "annual": "/an",
+        "per_user": "/utilisateur/mois"
+      }
+    }
+  },
+  "checkout": {
+    "pageTitle": "Paiement — Cyna",
+    "pageDescription": "Finalisez votre commande Cyna en quelques étapes.",
+    "heading": "Paiement",
+    "skeletonSr": "Chargement du tunnel de paiement…",
+    "redirecting": "Redirection vers Stripe…",
+    "errorToast": {
+      "title": "Impossible de joindre Stripe",
+      "unknown": "Erreur inconnue"
+    },
+    "steps": {
+      "aria": "Étapes du paiement",
+      "step1": "Authentification",
+      "step2": "Facturation",
+      "step3": "Paiement",
+      "step4": "Confirmation",
+      "completedPrefix": "Étape terminée :",
+      "currentPrefix": "Étape en cours :",
+      "futurePrefix": "Étape :"
+    },
+    "billing": {
+      "heading": "Informations de facturation",
+      "subheading": "Renseignez vos coordonnées de facturation. Les champs marqués d'un astérisque sont obligatoires.",
+      "errorSummary": "Veuillez corriger les erreurs suivantes :",
+      "back": "Retour",
+      "continue": "Continuer vers le paiement",
+      "fields": {
+        "firstName": "Prénom",
+        "lastName": "Nom",
+        "email": "Email",
+        "address1": "Adresse 1",
+        "address2": "Adresse 2 (optionnel)",
+        "city": "Ville",
+        "region": "Région",
+        "postalCode": "Code postal",
+        "country": "Pays",
+        "phone": "Téléphone"
+      },
+      "errors": {
+        "firstNameRequired": "Le prénom est requis.",
+        "lastNameRequired": "Le nom est requis.",
+        "emailRequired": "L'email est requis.",
+        "emailInvalid": "Format d'email invalide.",
+        "address1Required": "L'adresse est requise.",
+        "cityRequired": "La ville est requise.",
+        "regionRequired": "La région est requise.",
+        "postalCodeRequired": "Le code postal est requis.",
+        "postalCodeInvalid": "Code postal invalide.",
+        "countryRequired": "Le pays est requis.",
+        "phoneRequired": "Le téléphone est requis.",
+        "phoneInvalid": "Numéro de téléphone invalide."
+      }
+    },
+    "payment": {
+      "heading": "Méthode de paiement",
+      "subheading": "Le paiement est traité par Stripe, certifié PCI-DSS. Aucune donnée bancaire ne transite par nos serveurs.",
+      "methodsLegend": "Mode de paiement",
+      "methods": {
+        "card": "Carte bancaire",
+        "paypal": "PayPal"
+      },
+      "notice": "En cliquant « Payer avec Stripe », vous serez redirigé vers la page de paiement sécurisée Stripe pour saisir votre carte. Les moyens de paiement proposés dépendent de la configuration du compte Stripe.",
+      "indicativeAmount": "Montant indicatif",
+      "amountFooter": "Montant affiché à titre indicatif. Le total définitif est recalculé côté serveur à partir des prix Stripe lors de la création de la Checkout Session.",
+      "back": "Retour",
+      "confirm": "Payer avec Stripe",
+      "processing": "Redirection…",
+      "stripeNotice": "Vous serez redirigé vers la page de paiement sécurisée Stripe."
+    }
+  },
+  "checkoutSuccess": {
+    "pageTitle": "Commande confirmée — Cyna",
+    "pageDescription": "Confirmation de votre commande après le paiement Stripe. La commande est créée côté serveur par le webhook Stripe.",
+    "missing": {
+      "heading": "Aucune session de paiement",
+      "body": "Cette page se charge à la fin d'un paiement Stripe. Si vous y êtes arrivé directement, retournez au catalogue.",
+      "browse": "Parcourir le catalogue"
+    },
+    "confirmed": {
+      "heading": "Commande confirmée",
+      "body": "Merci pour votre achat. Un email de confirmation a été envoyé à <em>{email}</em> avec le récapitulatif.",
+      "orderNumber": "Numéro de commande",
+      "amountCharged": "Montant débité",
+      "viewOrders": "Voir mes commandes",
+      "continueShopping": "Continuer mes achats"
+    },
+    "pending": {
+      "heading": "Paiement en cours de confirmation",
+      "body": "Stripe a confirmé votre paiement. Nous attendons la notification serveur pour finaliser votre commande. Cela prend généralement quelques secondes.",
+      "timeout": "La notification n'est pas encore arrivée. Vous pouvez actualiser ci-dessous, ou consulter votre historique de commandes — elle apparaîtra dès la réception du webhook.",
+      "refresh": "Actualiser",
+      "refreshing": "Actualisation…",
+      "viewOrders": "Voir mes commandes"
+    }
+  },
+  "account": {
+    "shell": {
+      "pageTitle": "Mon compte — Cyna",
+      "pageDescription": "Gérez vos informations personnelles, vos adresses et vos méthodes de paiement.",
+      "heading": "Mon compte",
+      "connectedAs": "Connecté en tant que",
+      "logout": "Se déconnecter",
+      "skeleton": "Chargement de votre compte…",
+      "mfaRequiredHeading": "Authentification à deux facteurs requise",
+      "mfaRequiredBodyPrefix": "L'accès à l'administration nécessite la 2FA. Activez-la dans la section",
+      "mfaSectionLink": "Authentification à deux facteurs",
+      "mfaRequiredBodyMid": "ci-dessous, puis revenez sur",
+      "mfaRequiredBodySuffix": ".",
+      "nav": {
+        "aria": "Sections de mon compte",
+        "personalInfo": "Informations personnelles",
+        "addresses": "Carnet d'adresses",
+        "paymentMethods": "Méthodes de paiement",
+        "subscriptions": "Mes abonnements",
+        "twoFactor": "Sécurité / 2FA",
+        "ordersHistory": "Historique des commandes →"
+      }
+    },
+    "personal": {
+      "heading": "Informations personnelles",
+      "subheading": "Mettez à jour votre nom et votre email, ou changez votre mot de passe.",
+      "profileAria": "Profil",
+      "fullName": "Nom complet",
+      "email": "Email",
+      "emailInvalid": "Format d'email invalide.",
+      "emailReconfirmNotice": "Un email de re-confirmation sera envoyé à la nouvelle adresse une fois Supabase Auth branché.",
+      "saveProfile": "Enregistrer les modifications",
+      "saving": "Enregistrement…",
+      "updateFailed": "La mise à jour a échoué.",
+      "password": {
+        "heading": "Changer le mot de passe",
+        "subheading": "Saisissez votre mot de passe actuel pour confirmer le changement.",
+        "formAria": "Changement de mot de passe",
+        "current": "Mot de passe actuel",
+        "new": "Nouveau mot de passe",
+        "confirm": "Confirmer le nouveau mot de passe",
+        "mismatch": "Les mots de passe ne correspondent pas.",
+        "rule": "Au moins 8 caractères, avec une majuscule, un chiffre et un caractère spécial.",
+        "submit": "Mettre à jour le mot de passe",
+        "updating": "Mise à jour…"
+      }
+    },
+    "twoFactor": {
+      "heading": "Authentification à deux facteurs (2FA)",
+      "subheading": "Ajoute une étape supplémentaire à la connexion : un code à 6 chiffres généré par une application TOTP (Google Authenticator, Authy, 1Password…). L'accès à l'administration la requiert.",
+      "loading": "Chargement…",
+      "stateLabel": "État :",
+      "stateInactive": "Inactive",
+      "stateActive": "Active",
+      "activate": "Activer la 2FA",
+      "preparing": "Préparation…",
+      "qrStep1": "Scannez ce QR code avec votre application TOTP.",
+      "qrAlt": "QR code à scanner avec votre application TOTP",
+      "secretToggle": "Impossible de scanner ? Afficher le secret texte",
+      "codeStep2": "Saisissez le code à 6 chiffres généré",
+      "verifyActivate": "Vérifier et activer",
+      "verifying": "Vérification…",
+      "cancel": "Annuler",
+      "activeHint": "Vous serez invité à saisir un code à 6 chiffres lors de votre prochaine connexion à l'administration.",
+      "disable": "Désactiver la 2FA",
+      "recoveryHint": "En cas de perte de votre appareil TOTP, contactez un autre administrateur — la récupération nécessite une intervention en base (pas de codes de secours intégrés).",
+      "confirmDisableHeading": "Confirmer la désactivation",
+      "confirmDisableAdminBefore": "En tant qu'administrateur, désactiver la 2FA",
+      "confirmDisableAdminEmphasis": "bloquera votre accès à /admin",
+      "confirmDisableAdminAfter": "jusqu'à ce que vous la réactiviez. Saisissez votre code TOTP actuel pour confirmer.",
+      "confirmDisableUser": "Saisissez votre code TOTP actuel pour confirmer la désactivation.",
+      "disableCodeLabel": "Code à 6 chiffres",
+      "confirmDisable": "Confirmer la désactivation",
+      "disabling": "Désactivation…",
+      "enrollFailed": "L'enrôlement a échoué.",
+      "challengeFailed": "Le défi a échoué.",
+      "toastEnabled": {
+        "title": "2FA activée",
+        "desc": "Votre application TOTP est désormais requise à l'accès admin."
+      },
+      "toastDisabled": {
+        "title": "2FA désactivée",
+        "desc": "Votre facteur TOTP a été supprimé."
+      },
+      "toastError": {
+        "title": "Erreur 2FA"
+      },
+      "mfaError": {
+        "invalidCode": "Code à 6 chiffres invalide.",
+        "aal2Required": "Vérification 2FA requise pour cette opération.",
+        "expired": "Le code a expiré, recommencez.",
+        "notFound": "Facteur introuvable, rechargez la page."
+      }
+    },
+    "subscriptions": {
+      "heading": "Mes abonnements",
+      "subheading": "Gérez vos abonnements Cyna. La résiliation prend effet à la fin de la période payée — vous gardez l'accès jusque-là.",
+      "empty": "Vous n'avez aucun abonnement actif pour le moment.",
+      "loadError": "Impossible de charger vos abonnements : {error}",
+      "scheduledCancel": "Résiliation programmée",
+      "endsOn": "Se termine le",
+      "canceledSince": "Résilié depuis le",
+      "nextRenewal": "Prochaine échéance le",
+      "quantitySuffix": " · Quantité {value}",
+      "cancel": "Résilier",
+      "reactivate": "Réactiver",
+      "reactivating": "Réactivation…",
+      "confirmCancelHeading": "Confirmer la résiliation",
+      "confirmCancelBody": "Votre accès reste actif jusqu'au <em>{date}</em>. Aucun remboursement, vous pouvez réactiver jusque-là.",
+      "confirmCancelButton": "Confirmer la résiliation",
+      "scheduling": "Programmation…",
+      "cancelDialogCancel": "Annuler",
+      "cancelFailed": "Impossible de programmer la résiliation : {error}",
+      "reactivateFailed": "Impossible de réactiver l'abonnement : {error}",
+      "unknownError": "erreur inconnue",
+      "status": {
+        "incomplete": "Paiement à finaliser",
+        "incomplete_expired": "Expiré",
+        "trialing": "Période d'essai",
+        "active": "Actif",
+        "past_due": "Paiement en retard",
+        "canceled": "Résilié",
+        "unpaid": "Impayé",
+        "paused": "Suspendu"
+      },
+      "interval": {
+        "monthly": "Mensuel",
+        "annual": "Annuel"
+      },
+      "unit": {
+        "flat": "Forfait",
+        "per_user": "Par utilisateur",
+        "per_device": "Par appareil"
+      },
+      "defaultProduct": "Abonnement",
+      "dash": "—"
+    },
+    "addresses": {
+      "heading": "Carnet d'adresses",
+      "subheading": "Enregistrez vos adresses pour les retrouver au moment de la commande.",
+      "add": "Ajouter une adresse",
+      "emptyState": "Aucune adresse enregistrée pour le moment.",
+      "defaultBadge": "Par défaut",
+      "setDefault": "Définir par défaut",
+      "setDefaultAria": "Définir l'adresse {label} comme adresse par défaut",
+      "edit": "Modifier",
+      "editAria": "Modifier l'adresse {label}",
+      "delete": "Supprimer",
+      "deleteAria": "Supprimer l'adresse {label}",
+      "newTitle": "Nouvelle adresse",
+      "editTitle": "Modifier l'adresse",
+      "formAria": "Formulaire d'adresse",
+      "errorSummary": "Veuillez corriger les erreurs suivantes :",
+      "cancel": "Annuler",
+      "save": "Enregistrer",
+      "saving": "Enregistrement…",
+      "confirmDeleteTitle": "Supprimer l'adresse « {label} » ?",
+      "confirmDeleteBody": "Cette adresse sera retirée de votre carnet. Si elle était définie par défaut, vous pourrez désigner une autre adresse comme adresse par défaut.",
+      "confirmDeleteConfirm": "Supprimer",
+      "confirmDeleteCancel": "Annuler",
+      "loadErrorTitle": "Impossible de charger vos adresses",
+      "saveSuccessTitle": "Adresse enregistrée",
+      "saveSuccessDesc": "L'étiquette « {label} » a été enregistrée.",
+      "saveFailedTitle": "Échec de l'enregistrement",
+      "deleteSuccessTitle": "Adresse supprimée",
+      "deleteFailedTitle": "Échec de la suppression",
+      "setDefaultSuccessTitle": "Adresse par défaut mise à jour",
+      "setDefaultSuccessDesc": "« {label} » est maintenant l'adresse par défaut.",
+      "setDefaultFailedTitle": "Échec de la mise à jour",
+      "unknownError": "Erreur inconnue",
+      "fields": {
+        "label": "Étiquette (ex. Domicile)",
+        "firstName": "Prénom",
+        "lastName": "Nom",
+        "address1": "Adresse 1",
+        "address2": "Adresse 2 (optionnel)",
+        "city": "Ville",
+        "region": "Région",
+        "postalCode": "Code postal",
+        "country": "Pays",
+        "phone": "Téléphone"
+      },
+      "errors": {
+        "labelRequired": "L'étiquette est requise.",
+        "firstNameRequired": "Le prénom est requis.",
+        "lastNameRequired": "Le nom est requis.",
+        "address1Required": "L'adresse est requise.",
+        "cityRequired": "La ville est requise.",
+        "regionRequired": "La région est requise.",
+        "postalCodeRequired": "Le code postal est requis.",
+        "postalCodeInvalid": "Code postal invalide.",
+        "countryRequired": "Le pays est requis.",
+        "phoneRequired": "Le téléphone est requis.",
+        "phoneInvalid": "Numéro de téléphone invalide."
+      }
+    },
+    "paymentMethods": {
+      "heading": "Méthodes de paiement",
+      "subheading": "Vos cartes sont stockées chez Stripe (PCI-DSS). Aucune donnée carte n'est conservée par Cyna.",
+      "add": "Ajouter une carte",
+      "preparing": "Préparation…",
+      "emptyState": "Aucune carte enregistrée. Cliquez sur « Ajouter une carte » pour en enregistrer une via Stripe.",
+      "defaultBadge": "Par défaut",
+      "expires": "Expire {value}",
+      "setDefault": "Définir par défaut",
+      "setDefaultAria": "Définir {brand} {last4} comme carte par défaut",
+      "delete": "Supprimer",
+      "deleteAria": "Supprimer la carte {brand} {last4}",
+      "loadError": "Impossible de charger vos cartes : {error}",
+      "newCardHeading": "Nouvelle carte bancaire",
+      "toastAdded": {
+        "title": "Carte ajoutée",
+        "desc": "Votre nouvelle carte est enregistrée."
+      },
+      "toastAddFailed": {
+        "title": "Ajout de carte échoué",
+        "desc": "Stripe a refusé l'enregistrement. Réessayez avec une autre carte."
+      },
+      "toastAddPending": {
+        "title": "Ajout de carte en cours",
+        "desc": "La carte apparaîtra ici dans quelques instants."
+      },
+      "toastPrepareFailedTitle": "Impossible de préparer l'ajout de carte",
+      "toastNotFound": {
+        "title": "Carte introuvable",
+        "desc": "La carte a déjà été retirée. Liste rafraîchie."
+      },
+      "toastDeletedTitle": "Carte supprimée",
+      "toastDeleteFailedTitle": "Suppression impossible",
+      "toastDefaultUpdatedTitle": "Carte par défaut mise à jour",
+      "toastDefaultUpdateFailedTitle": "Échec de la mise à jour",
+      "confirmDeleteTitle": "Supprimer la carte {brand} •••• {last4} ?",
+      "confirmDeleteDefaultBody": "Cette carte est définie par défaut. Après suppression, Stripe utilisera une autre carte pour les renouvellements d'abonnement s'il en existe.",
+      "confirmDeleteBody": "Cette carte sera détachée de votre compte Stripe. Vous pourrez l'enregistrer à nouveau si besoin.",
+      "confirmDelete": "Supprimer",
+      "confirmDeleteCancel": "Annuler"
+    },
+    "addCard": {
+      "submit": "Enregistrer la carte",
+      "submitting": "Enregistrement…",
+      "cancel": "Annuler",
+      "formAria": "Formulaire d'ajout de carte",
+      "footer": "Aucune donnée carte n'est stockée par Cyna. Toutes les informations sont transmises directement à Stripe (PCI-DSS).",
+      "errorGeneric": "Impossible d'enregistrer la carte. Vérifiez les informations saisies.",
+      "errorProcessing": "La carte est en cours de traitement. Réessayez dans quelques instants si elle n'apparaît pas."
+    }
+  },
+  "tools": {
+    "pageTitle": "Contact & support — Cyna",
+    "heading": "Contact & support",
+    "subheading": "Une question commerciale, un sujet technique ou un point sur votre abonnement ? Notre équipe est joignable via le formulaire ci-dessous. Pour les réponses rapides aux questions courantes, ouvrez l'assistant."
+  },
+  "contact": {
+    "form": {
+      "heading": "Contactez-nous",
+      "subheading": "Notre équipe vous répond sous 24 heures ouvrées.",
+      "formAria": "Formulaire de contact",
+      "submit": "Envoyer le message",
+      "sending": "Envoi…",
+      "gdprNotice": "En envoyant ce formulaire, vous acceptez que Cyna utilise vos coordonnées pour répondre à votre demande. Vos données seront conservées 12 mois (RGPD).",
+      "confirmation": "Merci ! Votre message a bien été transmis à notre équipe support. Vous recevrez une réponse sous 24 heures ouvrées.",
+      "sendAnother": "Envoyer un autre message",
+      "genericSubmitError": "Impossible d'envoyer votre message pour le moment. Merci de réessayer dans quelques instants.",
+      "fields": {
+        "name": "Nom",
+        "email": "Email",
+        "subject": "Sujet",
+        "message": "Message"
+      },
+      "placeholders": {
+        "name": "Votre nom",
+        "email": "votre@email.com",
+        "subject": "Comment pouvons-nous vous aider ?",
+        "message": "Décrivez votre besoin…"
+      },
+      "errors": {
+        "nameRequired": "Le nom est requis.",
+        "nameTooShort": "Le nom doit faire au moins {min} caractère.",
+        "nameTooLong": "Le nom doit faire au plus {max} caractères.",
+        "emailRequired": "L'email est requis.",
+        "emailInvalid": "Format d'email invalide.",
+        "emailTooLong": "L'email doit faire au plus {max} caractères.",
+        "subjectRequired": "Le sujet est requis.",
+        "subjectTooShort": "Le sujet doit faire au moins {min} caractères.",
+        "subjectTooLong": "Le sujet doit faire au plus {max} caractères.",
+        "messageRequired": "Le message est requis.",
+        "messageTooShort": "Le message doit faire au moins {min} caractères.",
+        "messageTooLong": "Le message doit faire au plus {max} caractères."
+      }
+    },
+    "chatbot": {
+      "sectionHeading": "Assistant en ligne",
+      "sectionSubheading": "Une question rapide ? Démarrez une discussion avec l'assistant. Pour un cas précis, le formulaire de contact reste la voie la plus sûre.",
+      "bullet1": "· Disponible côté UI uniquement pour le moment.",
+      "bullet2": "· Réponses prédéfinies sur SOC / EDR / XDR et tarifs.",
+      "bullet3": "· L'escalade vers un agent humain passe par le formulaire.",
+      "cta": "Contactez-nous",
+      "dialogTitle": "Assistant Cyna",
+      "closeOverlay": "Fermer la fenêtre de discussion",
+      "closeButton": "Fermer la discussion",
+      "srUserPrefix": "Vous : ",
+      "srBotPrefix": "Assistant : ",
+      "suggestionsLabel": "Suggestions :",
+      "inputLabel": "Votre message",
+      "inputPlaceholder": "Tapez votre question…",
+      "sendLabel": "Envoyer le message",
+      "greeting": "Bonjour ! Je suis l'assistant Cyna. Je peux répondre à quelques questions courantes. Pour un cas précis, ouvrez un ticket via le formulaire.",
+      "defaultAnswer": "Je n'ai pas la réponse exacte. Un agent vous répondra rapidement — utilisez le formulaire de contact à gauche pour décrire votre besoin.",
+      "suggestions": {
+        "soc": "Qu'est-ce que le SOC ?",
+        "edr": "Comment activer l'EDR ?",
+        "pricing": "Quelles sont les options de tarification ?"
+      },
+      "faq": {
+        "soc": "Le SOC (Security Operations Center) est une équipe et une plateforme qui surveillent vos systèmes 24/7 et réagissent aux incidents.",
+        "edr": "L'EDR (Endpoint Detection & Response) protège vos postes et serveurs : détection comportementale, isolation, remédiation.",
+        "xdr": "Le XDR corrèle les signaux de plusieurs surfaces (endpoint, réseau, cloud, identité) pour une détection plus contextuelle.",
+        "pricing": "Chaque service propose mensuel, annuel et par utilisateur. Le détail est sur la fiche produit du catalogue.",
+        "invoice": "Les factures sont disponibles dans /orders. Le téléchargement PDF arrive avec le branchement Supabase."
+      }
+    }
+  },
+  "orders": {
+    "pageTitle": "Historique des commandes — Cyna",
+    "heading": "Historique des commandes",
+    "subheading": "Vos commandes sont regroupées par année, de la plus récente à la plus ancienne.",
+    "skeleton": "Chargement de vos commandes…",
+    "empty": {
+      "heading": "Aucune commande pour le moment",
+      "hint": "Lorsque vous validerez votre premier achat, vous le retrouverez ici avec son récapitulatif et la facture associée.",
+      "browse": "Parcourir le catalogue"
+    },
+    "noMatch": {
+      "heading": "Aucune correspondance",
+      "hint": "Ajustez les filtres pour retrouver une commande."
+    },
+    "loadFailedTitle": "Impossible de charger vos commandes",
+    "unknownError": "Erreur inconnue",
+    "yearGroupCount": "({count, plural, =1 {1 commande} other {# commandes}})",
+    "filters": {
+      "sectionAria": "Filtres de commandes",
+      "searchLabel": "Rechercher dans les commandes",
+      "searchPlaceholder": "Rechercher par nom ou date…",
+      "searchClear": "Effacer la recherche",
+      "year": "Année",
+      "yearAll": "Toutes les années",
+      "service": "Type de service",
+      "serviceAll": "Tous les services",
+      "status": "Statut",
+      "statusAll": "Tous les statuts",
+      "matchStatus": "{count, plural, =0 {Aucune commande ne correspond aux filtres.} =1 {1 commande affichée.} other {# commandes affichées.}}"
+    }
+  },
+  "orderCard": {
+    "labelPrefix": "Commande",
+    "servicesCount": "{count, plural, =1 {1 service} other {# services}}",
+    "statusAria": "Statut : {label}",
+    "moreItems": "+ {count, plural, =1 {1 autre service} other {# autres services}}",
+    "noItems": "Détails des services indisponibles pour cette commande.",
+    "showDetails": "Voir le détail",
+    "hideDetails": "Masquer le détail",
+    "downloadInvoice": "Télécharger la facture",
+    "opening": "Ouverture…",
+    "detailsPanelAria": "Détail de la commande {orderNumber}",
+    "servicesSection": "Services commandés",
+    "servicesSectionAria": "Récapitulatif des services",
+    "itemLine": "{duration} · Quantité {quantity}",
+    "indicativeTotal": "Total indicatif. Le montant débité par Stripe est recalculé serveur-side au paiement.",
+    "paymentSection": "Moyen de paiement",
+    "paymentSectionAria": "Moyen de paiement",
+    "paymentNote": "Les informations carte sont stockées chez Stripe (PCI-DSS). Cyna ne reçoit qu'un identifiant tokenisé.",
+    "duration": {
+      "monthly": "Mensuel",
+      "annual": "Annuel",
+      "per_user": "Par utilisateur"
+    },
+    "status": {
+      "pending": "En attente",
+      "completed": "Terminée",
+      "cancelled": "Annulée"
+    },
+    "toast": {
+      "noInvoiceTitle": "Aucune facture disponible",
+      "noInvoiceDescNoInvoice": "Cette commande n'a pas encore de facture (paiement non finalisé ou en attente).",
+      "noInvoiceDescNotFound": "Commande introuvable.",
+      "noInvoiceStripeMissing": "La facture Stripe est introuvable pour cette commande.",
+      "downloadFailedTitle": "Téléchargement impossible",
+      "downloadFailedRetry": "Nous n'avons pas pu récupérer la facture pour le moment. Merci de réessayer.",
+      "downloadFailedNetwork": "Vérifiez votre connexion et réessayez. Si le problème persiste, contactez le support."
+    }
+  },
+  "legal": {
+    "onlyFrenchNotice": "Ce contenu juridique n'est disponible qu'en français pour le moment.",
+    "lastUpdated": "Dernière mise à jour : {date}",
+    "about": {
+      "pageTitle": "À propos — Cyna",
+      "heading": "À propos de Cyna",
+      "subheading": "Notre mission, notre approche et ce qui nous différencie.",
+      "missionHeading": "Notre mission",
+      "missionBody": "Cyna est un éditeur français de solutions de cybersécurité SaaS pour les entreprises de toutes tailles. Nous proposons des plateformes SOC, EDR, XDR et de renseignement sur les menaces, conçues pour être déployées rapidement et opérées sans friction par les équipes sécurité.",
+      "approachHeading": "Notre approche",
+      "approachBody": "Nous croyons qu'une bonne défense repose sur trois piliers : la détection rapide, la réponse automatisée et une expérience opérateur claire. Nos produits intègrent des modèles de détection comportementale, une orchestration des réponses, et une console pensée pour les analystes du SOC — pas pour les démonstrations marketing.",
+      "commitmentsHeading": "Nos engagements",
+      "sovereignty": "Souveraineté.",
+      "sovereigntyBody": "Données hébergées en Union européenne, conformité RGPD intégrale.",
+      "transparency": "Transparence.",
+      "transparencyBody": "Pas de boîte noire : chaque alerte est explicable, chaque action automatisée est auditée.",
+      "accessibility": "Accessibilité.",
+      "accessibilityBody": "Tarification claire (mensuel, annuel, par utilisateur) et engagement contractuel sans reconduction tacite cachée.",
+      "contactHeading": "Nous contacter",
+      "contactBodyPrefix": "Pour une démonstration, une question commerciale ou un point technique, utilisez le",
+      "contactBodyLink": "formulaire de contact",
+      "contactBodySuffix": ". Nous répondons sous 24 heures ouvrées."
+    },
+    "mentions": {
+      "pageTitle": "Mentions légales — Cyna",
+      "heading": "Mentions légales",
+      "lastUpdatedDate": "18 juin 2026"
+    },
+    "cgu": {
+      "pageTitle": "Conditions générales d'utilisation et de vente — Cyna",
+      "heading": "Conditions générales d'utilisation et de vente",
+      "lastUpdatedDate": "18 juin 2026"
+    },
+    "privacy": {
+      "pageTitle": "Politique de confidentialité — Cyna",
+      "heading": "Politique de confidentialité",
+      "lastUpdatedDate": "2 juillet 2026"
+    }
+  }
+}

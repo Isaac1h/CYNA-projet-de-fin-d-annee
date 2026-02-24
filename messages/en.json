@@ -1,0 +1,832 @@
+{
+  "common": {
+    "loading": "Loading…",
+    "close": "Close",
+    "language": "Language",
+    "cancel": "Cancel",
+    "save": "Save",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous"
+  },
+  "nav": {
+    "primaryNav": "Primary navigation",
+    "mobileNav": "Mobile navigation",
+    "home": "Home",
+    "catalogue": "Catalog",
+    "tools": "Tools",
+    "search": "Search",
+    "searchPlaceholder": "Search products...",
+    "searchPlaceholderShort": "Search...",
+    "cart": "Cart",
+    "cartLabel": "Cart",
+    "userMenu": "User menu",
+    "userDefault": "User",
+    "myAccount": "My Account",
+    "myAccountShort": "My account",
+    "myOrders": "My orders",
+    "orders": "Order History",
+    "admin": "Admin",
+    "login": "Sign in",
+    "loginRegister": "Sign in / Sign up",
+    "register": "Sign up",
+    "logout": "Sign out",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "cgu": "Terms",
+    "mentionsLegales": "Legal notice",
+    "contact": "Contact",
+    "about": "About Cyna"
+  },
+  "home": {
+    "heroAriaLabel": "Home carousel",
+    "heroCtaFallback": "Get started",
+    "prevSlide": "Previous slide",
+    "nextSlide": "Next slide",
+    "goToSlide": "Go to slide {index}",
+    "partner": {
+      "title": "Your Trusted Security Partner",
+      "subtitle": "Cyna delivers cutting-edge cybersecurity solutions to protect your organization from evolving threats. Our comprehensive platform combines SOC, EDR, XDR and threat intelligence.",
+      "features": {
+        "protection": {
+          "title": "24/7 Protection",
+          "description": "Continuous monitoring and incident response"
+        },
+        "ai": {
+          "title": "AI-Powered",
+          "description": "Machine learning-driven threat detection"
+        },
+        "scalable": {
+          "title": "Scalable",
+          "description": "Grows with your organization's needs"
+        },
+        "expertSupport": {
+          "title": "Expert Support",
+          "description": "Dedicated security analysts and support team"
+        }
+      }
+    },
+    "editorialAriaLabel": "Editorial content",
+    "categories": {
+      "title": "Security Categories"
+    },
+    "topProducts": {
+      "title": "Featured Products",
+      "viewAll": "View All"
+    }
+  },
+  "footer": {
+    "tagline": "Your trusted partner for enterprise security solutions. Protecting organizations with cutting-edge SOC, EDR, XDR and threat intelligence platforms.",
+    "quickLinks": "Quick Links",
+    "legal": "Legal",
+    "linkHome": "Home",
+    "linkCatalogue": "Catalog",
+    "linkTools": "Tools",
+    "linkContact": "Contact",
+    "linkAbout": "About",
+    "linkMentionsLegales": "Legal notice",
+    "linkConfidentialite": "Privacy policy",
+    "linkCgu": "Terms of service",
+    "copyright": "© {year} Cyna. All rights reserved."
+  },
+  "cookieConsent": {
+    "title": "Cookies & privacy",
+    "body": "We store your choice in your browser (local storage) so this banner won't appear again. With your consent, we measure site traffic through Plausible — anonymous, cookieless, aggregated data. Refusing keeps the site 100% untracked.",
+    "learnMore": "Learn more in the privacy policy.",
+    "reject": "Reject all",
+    "accept": "Accept all"
+  },
+  "chatbot": {
+    "title": "Cyna Assistant",
+    "triggerOpen": "Open Cyna assistant",
+    "triggerClose": "Close chat window",
+    "closeDialog": "Close chat window",
+    "greeting": "Hi! I'm the Cyna assistant. Pick a question below or type your own — for anything else I'll point you to our support team.",
+    "escalationMessage": "I don't have an answer to that question. Would you like to contact our support team?",
+    "contactSupport": "Contact support",
+    "srUserPrefix": "You: ",
+    "srBotPrefix": "Assistant: ",
+    "faqLabel": "Frequently asked questions:",
+    "inputPlaceholder": "Type your question…",
+    "inputLabel": "Your question",
+    "sendLabel": "Send message"
+  },
+  "productCard": {
+    "stock": {
+      "inStock": "In Stock",
+      "limited": "Limited",
+      "outOfStock": "Out of Stock"
+    },
+    "monthly": "Monthly",
+    "annual": "Annual",
+    "pricePerMonth": "€{price}/mo",
+    "pricePerYear": "€{price}/yr",
+    "viewDetails": "View Details"
+  },
+  "catalogue": {
+    "headingAll": "Solutions catalog",
+    "headingWithCategory": "Catalog — {category}",
+    "subtitle": "Explore Cyna's range and filter by category, availability or keywords. Results are sorted by priority then availability by default.",
+    "resultsAriaLabel": "Catalog results",
+    "paginationAriaLabel": "Catalog pagination",
+    "noResults": {
+      "title": "No results",
+      "helper": "Adjust your filters or try a different search to discover our solutions."
+    },
+    "pageStatus": "Page {current} of {total} · {count, plural, =0 {no products} =1 {1 product} other {# products}} in total",
+    "filters": {
+      "sectionAria": "Catalog filters",
+      "searchLabel": "Search for a product",
+      "searchPlaceholder": "Search a product, a feature...",
+      "searchClear": "Clear search",
+      "searchSubmit": "Search",
+      "category": "Category",
+      "categoryAll": "All categories",
+      "stock": "Availability",
+      "stockAll": "All availabilities",
+      "stockInStock": "In Stock",
+      "stockLimited": "Limited",
+      "stockOutOfStock": "Out of Stock",
+      "sort": "Sort by",
+      "sortDefault": "Priority then availability",
+      "sortAvailability": "Availability",
+      "sortPriceAsc": "Price low to high",
+      "sortPriceDesc": "Price high to low",
+      "sortName": "Alphabetical",
+      "reset": "Reset filters",
+      "matchStatus": "{count, plural, =0 {No product matches your search.} =1 {1 product displayed.} other {# products displayed.}}"
+    }
+  },
+  "product": {
+    "notFoundTitle": "Product not found — Cyna",
+    "breadcrumbAria": "Breadcrumb",
+    "backToCategory": "Back to {category}",
+    "backToCatalogue": "Back to catalog",
+    "stockLabel": {
+      "inStock": "Available immediately",
+      "limited": "Available (limited capacity)",
+      "outOfStock": "Service unavailable"
+    },
+    "availabilityAria": "Availability: {label}",
+    "specsHeading": "Technical specifications",
+    "similarHeading": "Similar services",
+    "carousel": {
+      "regionAria": "Product image gallery",
+      "regionAriaEmpty": "No image available for this product",
+      "prev": "Previous image",
+      "next": "Next image",
+      "dotsAria": "Choose an image",
+      "dotAria": "Show image {index} of {total}"
+    },
+    "purchase": {
+      "tabsAria": "Pricing plans",
+      "tabMonthly": "Monthly",
+      "tabAnnual": "Annual",
+      "tabPerUser": "Per user",
+      "priceMonthly": "€{price}",
+      "priceAnnual": "€{price}",
+      "pricePerUser": "€{price}",
+      "priceLabelMonthly": "/mo",
+      "priceLabelAnnual": "/yr",
+      "priceLabelPerUser": "/user/mo",
+      "saveAnnual": "Save 17% annually",
+      "flexPerUser": "Flexible pricing for any team size",
+      "subscribe": "Subscribe",
+      "alreadyInCart": "Already in cart",
+      "outOfStockCta": "Service unavailable",
+      "requestDemo": "Request a demo",
+      "demoToastTitle": "Demo request sent",
+      "demoToastDescription": "Our sales team will contact you within 24 hours."
+    }
+  },
+  "category": {
+    "notFoundTitle": "Category not found — Cyna",
+    "backToCatalogue": "Back to catalog",
+    "productsSection": "Products in the {name} category",
+    "presentationSection": "Presentation of the {name} category",
+    "productCount": "{count, plural, =0 {No products available} =1 {1 product available} other {# products available}}",
+    "sortedByPriority": "Sorted by priority then availability",
+    "empty": {
+      "title": "No products in this category yet",
+      "hint": "Check back later or browse the",
+      "hintLink": "full catalog"
+    }
+  },
+  "search": {
+    "resultCount": "{count, plural, =0 {No results} =1 {1 result} other {# results}}",
+    "resultCountWithQuery": "{count, plural, =0 {No results} =1 {1 result} other {# results}} for \"{query}\"",
+    "subtitle": "Refine your search with the filters below. Parameters are kept in the URL for sharing and navigation.",
+    "filtersAriaLabel": "Search filters",
+    "resultsAriaLabel": "Search results",
+    "paginationAriaLabel": "Search results pagination",
+    "pageStatus": "Page {current} of {total} · {count, plural, =0 {no results} =1 {1 result} other {# results}} in total",
+    "noResults": {
+      "title": "No results",
+      "helper": "Broaden your filters or try a different search to find a Cyna solution."
+    },
+    "filters": {
+      "searchLabel": "Search the catalog",
+      "searchPlaceholder": "Search a product, a feature…",
+      "searchClear": "Clear search",
+      "heading": "Filters",
+      "categories": "Categories",
+      "availability": "Availability",
+      "stockInStock": "In Stock",
+      "stockLimited": "Limited",
+      "stockOutOfStock": "Out of Stock",
+      "priceHeading": "Monthly price (€)",
+      "priceMin": "Minimum",
+      "priceMax": "Maximum",
+      "sort": "Sort by",
+      "sortDefault": "Relevance",
+      "sortPriceAsc": "Price low to high",
+      "sortPriceDesc": "Price high to low",
+      "sortNewest": "Newest",
+      "sortName": "Alphabetical",
+      "reset": "Reset filters",
+      "matchStatus": "{count, plural, =0 {No product matches your criteria.} =1 {1 result.} other {# results.}}"
+    }
+  },
+  "pagination": {
+    "ariaLabel": "Pagination",
+    "previous": "Previous",
+    "next": "Next",
+    "prevAria": "Previous page",
+    "prevAriaDisabled": "Previous page (disabled)",
+    "nextAria": "Next page",
+    "nextAriaDisabled": "Next page (disabled)",
+    "pageAria": "Page {page}",
+    "pageAriaCurrent": "Page {page} (current page)",
+    "morePages": "More pages"
+  },
+  "cart": {
+    "pageTitle": "Cart — Cyna",
+    "pageDescription": "Review your selected Cyna solutions before proceeding to checkout.",
+    "heading": "Cart",
+    "clear": "Empty cart",
+    "articlesAria": "Cart items",
+    "summaryAria": "Order summary",
+    "summary": "Summary",
+    "subtotal": "Subtotal",
+    "taxes": "Taxes",
+    "taxesValue": "Calculated at checkout",
+    "totalEstimate": "Estimated total",
+    "totalHint": "Indicative amount. The final total will be confirmed at checkout.",
+    "notSignedInMsg": "Sign in to save your cart.",
+    "signIn": "Sign in",
+    "signUp": "Sign up",
+    "checkoutCtaAuthed": "Proceed to checkout",
+    "checkoutCtaGuest": "Sign in to pay",
+    "continueShopping": "Continue shopping",
+    "skeletonSr": "Loading cart…",
+    "empty": {
+      "heading": "Your cart is empty",
+      "hint": "Start exploring the Cyna catalog to add a solution to your cart.",
+      "browse": "Browse the catalog"
+    },
+    "line": {
+      "duration": "Duration",
+      "quantity": "Quantity",
+      "lineSubtotal": "Line subtotal",
+      "articleAria": "Item: {name}",
+      "removeAria": "Remove {name} from cart",
+      "increaseAria": "Increase quantity of {name}",
+      "decreaseAria": "Decrease quantity of {name}",
+      "durationLabel": {
+        "monthly": "Monthly",
+        "annual": "Annual",
+        "per_user": "Per user"
+      },
+      "durationSuffix": {
+        "monthly": "/mo",
+        "annual": "/yr",
+        "per_user": "/user/mo"
+      }
+    }
+  },
+  "checkout": {
+    "pageTitle": "Checkout — Cyna",
+    "pageDescription": "Complete your Cyna order in a few steps.",
+    "heading": "Checkout",
+    "skeletonSr": "Loading checkout…",
+    "redirecting": "Redirecting to Stripe…",
+    "errorToast": {
+      "title": "Unable to reach Stripe",
+      "unknown": "Unknown error"
+    },
+    "steps": {
+      "aria": "Checkout steps",
+      "step1": "Authentication",
+      "step2": "Billing",
+      "step3": "Payment",
+      "step4": "Confirmation",
+      "completedPrefix": "Step completed:",
+      "currentPrefix": "Current step:",
+      "futurePrefix": "Step:"
+    },
+    "billing": {
+      "heading": "Billing information",
+      "subheading": "Enter your billing details. Fields marked with an asterisk are required.",
+      "errorSummary": "Please fix the following errors:",
+      "back": "Back",
+      "continue": "Continue to payment",
+      "fields": {
+        "firstName": "First name",
+        "lastName": "Last name",
+        "email": "Email",
+        "address1": "Address line 1",
+        "address2": "Address line 2 (optional)",
+        "city": "City",
+        "region": "Region",
+        "postalCode": "Postal code",
+        "country": "Country",
+        "phone": "Phone"
+      },
+      "errors": {
+        "firstNameRequired": "First name is required.",
+        "lastNameRequired": "Last name is required.",
+        "emailRequired": "Email is required.",
+        "emailInvalid": "Invalid email format.",
+        "address1Required": "Address is required.",
+        "cityRequired": "City is required.",
+        "regionRequired": "Region is required.",
+        "postalCodeRequired": "Postal code is required.",
+        "postalCodeInvalid": "Invalid postal code.",
+        "countryRequired": "Country is required.",
+        "phoneRequired": "Phone number is required.",
+        "phoneInvalid": "Invalid phone number."
+      }
+    },
+    "payment": {
+      "heading": "Payment method",
+      "subheading": "Payment is processed by Stripe, PCI-DSS certified. No card data transits our servers.",
+      "methodsLegend": "Payment method",
+      "methods": {
+        "card": "Credit card",
+        "paypal": "PayPal"
+      },
+      "notice": "By clicking \"Pay with Stripe\", you'll be redirected to Stripe's secure payment page to enter your card details. The available payment methods depend on the Stripe account configuration.",
+      "indicativeAmount": "Indicative amount",
+      "amountFooter": "Amount shown for reference. The final total is recomputed server-side from Stripe prices when creating the Checkout Session.",
+      "back": "Back",
+      "confirm": "Pay with Stripe",
+      "processing": "Redirecting…",
+      "stripeNotice": "You'll be redirected to Stripe's secure payment page."
+    }
+  },
+  "checkoutSuccess": {
+    "pageTitle": "Order confirmed — Cyna",
+    "pageDescription": "Confirmation of your order after Stripe payment. The order is created server-side by the Stripe webhook.",
+    "missing": {
+      "heading": "No payment session",
+      "body": "This page loads at the end of a Stripe payment. If you got here directly, please return to the catalog.",
+      "browse": "Browse the catalog"
+    },
+    "confirmed": {
+      "heading": "Order confirmed",
+      "body": "Thank you for your purchase. A confirmation email has been sent to <em>{email}</em> with the summary.",
+      "orderNumber": "Order number",
+      "amountCharged": "Amount charged",
+      "viewOrders": "View my orders",
+      "continueShopping": "Continue shopping"
+    },
+    "pending": {
+      "heading": "Payment being confirmed",
+      "body": "Stripe has confirmed your payment. We're waiting on the server notification to finalize your order. This usually takes a few seconds.",
+      "timeout": "The notification hasn't arrived yet. You can refresh below, or check your order history — it will appear as soon as the webhook is received.",
+      "refresh": "Refresh",
+      "refreshing": "Refreshing…",
+      "viewOrders": "View my orders"
+    }
+  },
+  "account": {
+    "shell": {
+      "pageTitle": "My account — Cyna",
+      "pageDescription": "Manage your personal information, addresses and payment methods.",
+      "heading": "My account",
+      "connectedAs": "Signed in as",
+      "logout": "Sign out",
+      "skeleton": "Loading your account…",
+      "mfaRequiredHeading": "Two-factor authentication required",
+      "mfaRequiredBodyPrefix": "Admin access requires 2FA. Enable it in the",
+      "mfaSectionLink": "Two-factor authentication",
+      "mfaRequiredBodyMid": "section below, then return to",
+      "mfaRequiredBodySuffix": ".",
+      "nav": {
+        "aria": "My account sections",
+        "personalInfo": "Personal information",
+        "addresses": "Address book",
+        "paymentMethods": "Payment methods",
+        "subscriptions": "My subscriptions",
+        "twoFactor": "Security / 2FA",
+        "ordersHistory": "Order history →"
+      }
+    },
+    "personal": {
+      "heading": "Personal information",
+      "subheading": "Update your name and email, or change your password.",
+      "profileAria": "Profile",
+      "fullName": "Full name",
+      "email": "Email",
+      "emailInvalid": "Invalid email format.",
+      "emailReconfirmNotice": "A re-confirmation email will be sent to the new address once Supabase Auth is wired in.",
+      "saveProfile": "Save changes",
+      "saving": "Saving…",
+      "updateFailed": "The update failed.",
+      "password": {
+        "heading": "Change password",
+        "subheading": "Enter your current password to confirm the change.",
+        "formAria": "Change password",
+        "current": "Current password",
+        "new": "New password",
+        "confirm": "Confirm new password",
+        "mismatch": "Passwords do not match.",
+        "rule": "At least 8 characters, with an uppercase letter, a digit and a special character.",
+        "submit": "Update password",
+        "updating": "Updating…"
+      }
+    },
+    "twoFactor": {
+      "heading": "Two-factor authentication (2FA)",
+      "subheading": "Adds an extra step to sign-in: a 6-digit code generated by a TOTP app (Google Authenticator, Authy, 1Password…). Admin access requires it.",
+      "loading": "Loading…",
+      "stateLabel": "Status:",
+      "stateInactive": "Inactive",
+      "stateActive": "Active",
+      "activate": "Enable 2FA",
+      "preparing": "Preparing…",
+      "qrStep1": "Scan this QR code with your TOTP app.",
+      "qrAlt": "QR code to scan with your TOTP app",
+      "secretToggle": "Can't scan? Show the text secret",
+      "codeStep2": "Enter the 6-digit code generated",
+      "verifyActivate": "Verify and enable",
+      "verifying": "Verifying…",
+      "cancel": "Cancel",
+      "activeHint": "You'll be prompted for a 6-digit code on your next admin sign-in.",
+      "disable": "Disable 2FA",
+      "recoveryHint": "If you lose your TOTP device, contact another admin — recovery requires a database intervention (no built-in backup codes).",
+      "confirmDisableHeading": "Confirm disabling",
+      "confirmDisableAdminBefore": "As an admin, disabling 2FA",
+      "confirmDisableAdminEmphasis": "will block your access to /admin",
+      "confirmDisableAdminAfter": "until you re-enable it. Enter your current TOTP code to confirm.",
+      "confirmDisableUser": "Enter your current TOTP code to confirm disabling.",
+      "disableCodeLabel": "6-digit code",
+      "confirmDisable": "Confirm disabling",
+      "disabling": "Disabling…",
+      "enrollFailed": "Enrollment failed.",
+      "challengeFailed": "Challenge failed.",
+      "toastEnabled": {
+        "title": "2FA enabled",
+        "desc": "Your TOTP app is now required for admin access."
+      },
+      "toastDisabled": {
+        "title": "2FA disabled",
+        "desc": "Your TOTP factor has been removed."
+      },
+      "toastError": {
+        "title": "2FA error"
+      },
+      "mfaError": {
+        "invalidCode": "Invalid 6-digit code.",
+        "aal2Required": "2FA verification required for this operation.",
+        "expired": "The code has expired, start over.",
+        "notFound": "Factor not found, reload the page."
+      }
+    },
+    "subscriptions": {
+      "heading": "My subscriptions",
+      "subheading": "Manage your Cyna subscriptions. Cancellation takes effect at the end of the paid period — you keep access until then.",
+      "empty": "You have no active subscriptions at the moment.",
+      "loadError": "Unable to load your subscriptions: {error}",
+      "scheduledCancel": "Cancellation scheduled",
+      "endsOn": "Ends on",
+      "canceledSince": "Cancelled since",
+      "nextRenewal": "Next renewal on",
+      "quantitySuffix": " · Quantity {value}",
+      "cancel": "Cancel",
+      "reactivate": "Reactivate",
+      "reactivating": "Reactivating…",
+      "confirmCancelHeading": "Confirm cancellation",
+      "confirmCancelBody": "Your access stays active until <em>{date}</em>. No refund, you can reactivate until then.",
+      "confirmCancelButton": "Confirm cancellation",
+      "scheduling": "Scheduling…",
+      "cancelDialogCancel": "Cancel",
+      "cancelFailed": "Unable to schedule cancellation: {error}",
+      "reactivateFailed": "Unable to reactivate the subscription: {error}",
+      "unknownError": "unknown error",
+      "status": {
+        "incomplete": "Payment to finalize",
+        "incomplete_expired": "Expired",
+        "trialing": "Trial period",
+        "active": "Active",
+        "past_due": "Payment overdue",
+        "canceled": "Cancelled",
+        "unpaid": "Unpaid",
+        "paused": "Paused"
+      },
+      "interval": {
+        "monthly": "Monthly",
+        "annual": "Annual"
+      },
+      "unit": {
+        "flat": "Flat",
+        "per_user": "Per user",
+        "per_device": "Per device"
+      },
+      "defaultProduct": "Subscription",
+      "dash": "—"
+    },
+    "addresses": {
+      "heading": "Address book",
+      "subheading": "Save your addresses to find them again at checkout.",
+      "add": "Add an address",
+      "emptyState": "No addresses saved yet.",
+      "defaultBadge": "Default",
+      "setDefault": "Set as default",
+      "setDefaultAria": "Set address {label} as default",
+      "edit": "Edit",
+      "editAria": "Edit address {label}",
+      "delete": "Delete",
+      "deleteAria": "Delete address {label}",
+      "newTitle": "New address",
+      "editTitle": "Edit address",
+      "formAria": "Address form",
+      "errorSummary": "Please fix the following errors:",
+      "cancel": "Cancel",
+      "save": "Save",
+      "saving": "Saving…",
+      "confirmDeleteTitle": "Delete address \"{label}\"?",
+      "confirmDeleteBody": "This address will be removed from your book. If it was the default, you can designate another address as default.",
+      "confirmDeleteConfirm": "Delete",
+      "confirmDeleteCancel": "Cancel",
+      "loadErrorTitle": "Unable to load your addresses",
+      "saveSuccessTitle": "Address saved",
+      "saveSuccessDesc": "The label \"{label}\" was saved.",
+      "saveFailedTitle": "Save failed",
+      "deleteSuccessTitle": "Address deleted",
+      "deleteFailedTitle": "Delete failed",
+      "setDefaultSuccessTitle": "Default address updated",
+      "setDefaultSuccessDesc": "\"{label}\" is now the default address.",
+      "setDefaultFailedTitle": "Update failed",
+      "unknownError": "Unknown error",
+      "fields": {
+        "label": "Label (e.g. Home)",
+        "firstName": "First name",
+        "lastName": "Last name",
+        "address1": "Address line 1",
+        "address2": "Address line 2 (optional)",
+        "city": "City",
+        "region": "Region",
+        "postalCode": "Postal code",
+        "country": "Country",
+        "phone": "Phone"
+      },
+      "errors": {
+        "labelRequired": "Label is required.",
+        "firstNameRequired": "First name is required.",
+        "lastNameRequired": "Last name is required.",
+        "address1Required": "Address is required.",
+        "cityRequired": "City is required.",
+        "regionRequired": "Region is required.",
+        "postalCodeRequired": "Postal code is required.",
+        "postalCodeInvalid": "Invalid postal code.",
+        "countryRequired": "Country is required.",
+        "phoneRequired": "Phone number is required.",
+        "phoneInvalid": "Invalid phone number."
+      }
+    },
+    "paymentMethods": {
+      "heading": "Payment methods",
+      "subheading": "Your cards are stored with Stripe (PCI-DSS). No card data is kept by Cyna.",
+      "add": "Add a card",
+      "preparing": "Preparing…",
+      "emptyState": "No cards saved. Click \"Add a card\" to register one via Stripe.",
+      "defaultBadge": "Default",
+      "expires": "Expires {value}",
+      "setDefault": "Set as default",
+      "setDefaultAria": "Set {brand} {last4} as default card",
+      "delete": "Delete",
+      "deleteAria": "Delete card {brand} {last4}",
+      "loadError": "Unable to load your cards: {error}",
+      "newCardHeading": "New card",
+      "toastAdded": {
+        "title": "Card added",
+        "desc": "Your new card is saved."
+      },
+      "toastAddFailed": {
+        "title": "Card add failed",
+        "desc": "Stripe rejected the registration. Try again with another card."
+      },
+      "toastAddPending": {
+        "title": "Card add in progress",
+        "desc": "The card will appear here in a few moments."
+      },
+      "toastPrepareFailedTitle": "Unable to prepare card add",
+      "toastNotFound": {
+        "title": "Card not found",
+        "desc": "The card has already been removed. List refreshed."
+      },
+      "toastDeletedTitle": "Card deleted",
+      "toastDeleteFailedTitle": "Delete failed",
+      "toastDefaultUpdatedTitle": "Default card updated",
+      "toastDefaultUpdateFailedTitle": "Update failed",
+      "confirmDeleteTitle": "Delete card {brand} •••• {last4}?",
+      "confirmDeleteDefaultBody": "This card is set as default. After deletion, Stripe will use another card for subscription renewals if one exists.",
+      "confirmDeleteBody": "This card will be detached from your Stripe account. You can register it again if needed.",
+      "confirmDelete": "Delete",
+      "confirmDeleteCancel": "Cancel"
+    },
+    "addCard": {
+      "submit": "Save card",
+      "submitting": "Saving…",
+      "cancel": "Cancel",
+      "formAria": "Card add form",
+      "footer": "No card data is stored by Cyna. All information is sent directly to Stripe (PCI-DSS).",
+      "errorGeneric": "Unable to save the card. Please check the entered information.",
+      "errorProcessing": "The card is being processed. Try again in a few moments if it doesn't appear."
+    }
+  },
+  "tools": {
+    "pageTitle": "Contact & support — Cyna",
+    "heading": "Contact & support",
+    "subheading": "A sales question, a technical topic or a note about your subscription? Our team is reachable via the form below. For quick answers to common questions, open the assistant."
+  },
+  "contact": {
+    "form": {
+      "heading": "Contact us",
+      "subheading": "Our team replies within 24 business hours.",
+      "formAria": "Contact form",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "gdprNotice": "By sending this form, you agree that Cyna uses your contact details to answer your request. Your data is kept for 12 months (GDPR).",
+      "confirmation": "Thanks! Your message has been sent to our support team. You'll receive a reply within 24 business hours.",
+      "sendAnother": "Send another message",
+      "genericSubmitError": "We can't send your message right now. Please try again in a few moments.",
+      "fields": {
+        "name": "Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message"
+      },
+      "placeholders": {
+        "name": "Your name",
+        "email": "you@email.com",
+        "subject": "How can we help?",
+        "message": "Describe your need…"
+      },
+      "errors": {
+        "nameRequired": "Name is required.",
+        "nameTooShort": "Name must be at least {min} character.",
+        "nameTooLong": "Name must be at most {max} characters.",
+        "emailRequired": "Email is required.",
+        "emailInvalid": "Invalid email format.",
+        "emailTooLong": "Email must be at most {max} characters.",
+        "subjectRequired": "Subject is required.",
+        "subjectTooShort": "Subject must be at least {min} characters.",
+        "subjectTooLong": "Subject must be at most {max} characters.",
+        "messageRequired": "Message is required.",
+        "messageTooShort": "Message must be at least {min} characters.",
+        "messageTooLong": "Message must be at most {max} characters."
+      }
+    },
+    "chatbot": {
+      "sectionHeading": "Online assistant",
+      "sectionSubheading": "A quick question? Start a chat with the assistant. For a specific case, the contact form is the safer route.",
+      "bullet1": "· Available UI-side only for now.",
+      "bullet2": "· Preset answers on SOC / EDR / XDR and pricing.",
+      "bullet3": "· Escalation to a human agent goes through the form.",
+      "cta": "Contact us",
+      "dialogTitle": "Cyna Assistant",
+      "closeOverlay": "Close chat window",
+      "closeButton": "Close chat",
+      "srUserPrefix": "You: ",
+      "srBotPrefix": "Assistant: ",
+      "suggestionsLabel": "Suggestions:",
+      "inputLabel": "Your message",
+      "inputPlaceholder": "Type your question…",
+      "sendLabel": "Send message",
+      "greeting": "Hi! I'm the Cyna assistant. I can answer a few common questions. For a specific case, open a ticket via the form.",
+      "defaultAnswer": "I don't have the exact answer. An agent will reply quickly — use the contact form on the left to describe your need.",
+      "suggestions": {
+        "soc": "What is the SOC?",
+        "edr": "How do I enable EDR?",
+        "pricing": "What are the pricing options?"
+      },
+      "faq": {
+        "soc": "The SOC (Security Operations Center) is a team and a platform that monitor your systems 24/7 and respond to incidents.",
+        "edr": "EDR (Endpoint Detection & Response) protects your workstations and servers: behavioral detection, isolation, remediation.",
+        "xdr": "XDR correlates signals from multiple surfaces (endpoint, network, cloud, identity) for more contextual detection.",
+        "pricing": "Each service is available monthly, annually and per user. Details are on the product page in the catalog.",
+        "invoice": "Invoices are available in /orders. PDF download is coming with the Supabase integration."
+      }
+    }
+  },
+  "orders": {
+    "pageTitle": "Order history — Cyna",
+    "heading": "Order history",
+    "subheading": "Your orders are grouped by year, from the most recent to the oldest.",
+    "skeleton": "Loading your orders…",
+    "empty": {
+      "heading": "No orders yet",
+      "hint": "Once you complete your first purchase, you'll find it here with its summary and the associated invoice.",
+      "browse": "Browse the catalog"
+    },
+    "noMatch": {
+      "heading": "No matches",
+      "hint": "Adjust the filters to find an order."
+    },
+    "loadFailedTitle": "Unable to load your orders",
+    "unknownError": "Unknown error",
+    "yearGroupCount": "({count, plural, =1 {1 order} other {# orders}})",
+    "filters": {
+      "sectionAria": "Order filters",
+      "searchLabel": "Search in orders",
+      "searchPlaceholder": "Search by name or date…",
+      "searchClear": "Clear search",
+      "year": "Year",
+      "yearAll": "All years",
+      "service": "Service type",
+      "serviceAll": "All services",
+      "status": "Status",
+      "statusAll": "All statuses",
+      "matchStatus": "{count, plural, =0 {No order matches the filters.} =1 {1 order displayed.} other {# orders displayed.}}"
+    }
+  },
+  "orderCard": {
+    "labelPrefix": "Order",
+    "servicesCount": "{count, plural, =1 {1 service} other {# services}}",
+    "statusAria": "Status: {label}",
+    "moreItems": "+ {count, plural, =1 {1 more service} other {# more services}}",
+    "noItems": "Service details unavailable for this order.",
+    "showDetails": "Show details",
+    "hideDetails": "Hide details",
+    "downloadInvoice": "Download invoice",
+    "opening": "Opening…",
+    "detailsPanelAria": "Order details for {orderNumber}",
+    "servicesSection": "Ordered services",
+    "servicesSectionAria": "Services summary",
+    "itemLine": "{duration} · Quantity {quantity}",
+    "indicativeTotal": "Indicative total. The amount charged by Stripe is recomputed server-side at payment.",
+    "paymentSection": "Payment method",
+    "paymentSectionAria": "Payment method",
+    "paymentNote": "Card information is stored with Stripe (PCI-DSS). Cyna only receives a tokenized identifier.",
+    "duration": {
+      "monthly": "Monthly",
+      "annual": "Annual",
+      "per_user": "Per user"
+    },
+    "status": {
+      "pending": "Pending",
+      "completed": "Completed",
+      "cancelled": "Cancelled"
+    },
+    "toast": {
+      "noInvoiceTitle": "No invoice available",
+      "noInvoiceDescNoInvoice": "This order doesn't have an invoice yet (payment not finalized or pending).",
+      "noInvoiceDescNotFound": "Order not found.",
+      "noInvoiceStripeMissing": "The Stripe invoice is unavailable for this order.",
+      "downloadFailedTitle": "Download failed",
+      "downloadFailedRetry": "We couldn't retrieve the invoice at the moment. Please try again.",
+      "downloadFailedNetwork": "Check your connection and try again. If the issue persists, contact support."
+    }
+  },
+  "legal": {
+    "onlyFrenchNotice": "This legal content is only available in French for now.",
+    "lastUpdated": "Last updated: {date}",
+    "about": {
+      "pageTitle": "About — Cyna",
+      "heading": "About Cyna",
+      "subheading": "Our mission, our approach and what sets us apart.",
+      "missionHeading": "Our mission",
+      "missionBody": "Cyna is a French vendor of SaaS cybersecurity solutions for businesses of all sizes. We provide SOC, EDR, XDR and threat intelligence platforms, designed to be deployed quickly and operated with no friction by security teams.",
+      "approachHeading": "Our approach",
+      "approachBody": "We believe good defense rests on three pillars: fast detection, automated response and a clear operator experience. Our products combine behavioral detection models, response orchestration and a console built for SOC analysts — not marketing demos.",
+      "commitmentsHeading": "Our commitments",
+      "sovereignty": "Sovereignty.",
+      "sovereigntyBody": "Data hosted in the European Union, full GDPR compliance.",
+      "transparency": "Transparency.",
+      "transparencyBody": "No black box: every alert is explainable, every automated action is audited.",
+      "accessibility": "Accessibility.",
+      "accessibilityBody": "Clear pricing (monthly, annual, per user) and a contract with no hidden silent renewal.",
+      "contactHeading": "Contact us",
+      "contactBodyPrefix": "For a demo, a sales question or a technical topic, use the",
+      "contactBodyLink": "contact form",
+      "contactBodySuffix": ". We reply within 24 business hours."
+    },
+    "mentions": {
+      "pageTitle": "Legal notice — Cyna",
+      "heading": "Legal notice",
+      "lastUpdatedDate": "18 June 2026"
+    },
+    "cgu": {
+      "pageTitle": "Terms of use and sale — Cyna",
+      "heading": "Terms of use and sale",
+      "lastUpdatedDate": "18 June 2026"
+    },
+    "privacy": {
+      "pageTitle": "Privacy policy — Cyna",
+      "heading": "Privacy policy",
+      "lastUpdatedDate": "2 July 2026"
+    }
+  }
+}
