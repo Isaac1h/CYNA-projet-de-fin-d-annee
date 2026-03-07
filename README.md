@@ -12,6 +12,7 @@
 - Docs importantes (utiles tout le projet) ➝ **à push ici**  
 - Docs temporaires/obsolètes ➝ **à push sur la branche `sprint-x` du sprint concerné**
 =======
+
 Plateforme e-commerce SaaS dédiée aux solutions de cybersécurité : **SOC · EDR · XDR**
 
 <p align="center">
