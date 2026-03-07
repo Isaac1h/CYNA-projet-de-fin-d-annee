@@ -7,7 +7,7 @@ Cette branche contient tous les documents de conception et de gestion du projet.
 * **`/sujet-projet`** : Énoncé officiel et contraintes techniques.
 * **`/documentation-stripe`** : Ressources pour l'intégration du paiement.
 * **`/maquette-figma`** : Maquettes et prototypes UI/UX réalisés sur Figma.
-
+* **`/informations-bloc-2`** : Critères de notation, consignes de l'oral et livrables du Bloc 2.
 ---
 
 ### 📌 Règles
