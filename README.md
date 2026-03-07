@@ -62,4 +62,3 @@ Créer une application **moderne, mobile-first et sécurisée** permettant :
 ---
 
 Projet académique — SUP DE VINCI · Institut Limayrac
->>>>>>> 5f45705486a1b5a3c87beae2ce36366d2c293044
