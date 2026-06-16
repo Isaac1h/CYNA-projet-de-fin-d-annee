@@ -3,16 +3,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-
-type Product = {
-  id: string;
-  name: string;
-  description: string;
-  image_url: string;
-  stock_status: string;
-  price_monthly?: number;
-  price_annual?: number;
-};
+import type { Product } from '@/lib/data';
 
 const getStockStatusColor = (status: string) => {
   switch (status) {

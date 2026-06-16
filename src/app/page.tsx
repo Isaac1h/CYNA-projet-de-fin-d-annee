@@ -4,35 +4,16 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Shield, Zap, TrendingUp, Users } from 'lucide-react';
-import { getCategories, getProducts, getCarouselItems } from '@/lib/demoData';
+import {
+  getCarouselItems,
+  getCategories,
+  getTopProducts,
+  type CarouselItem,
+  type Category,
+  type Product,
+} from '@/lib/data';
 import ProductCard from '@/components/ProductCard';
 import { Button } from '@/components/ui/button';
-
-type CarouselItem = {
-  id: string;
-  title: string;
-  description: string;
-  image_url: string;
-  cta_text?: string;
-  cta_link?: string;
-};
-
-type Category = {
-  id: string;
-  name: string;
-  description: string;
-  image_url: string;
-};
-
-type Product = {
-  id: string;
-  name: string;
-  description: string;
-  image_url: string;
-  stock_status: string;
-  price_monthly?: number;
-  price_annual?: number;
-};
 
 export default function HomePage() {
   const [carouselItems, setCarouselItems] = useState<CarouselItem[]>([]);
@@ -41,10 +22,16 @@ export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
-    setCarouselItems(getCarouselItems());
-    setCategories(getCategories());
-    const products = getProducts();
-    setTopProducts(products.slice(0, 6));
+    void (async () => {
+      const [carousel, cats, products] = await Promise.all([
+        getCarouselItems(),
+        getCategories(),
+        getTopProducts(6),
+      ]);
+      setCarouselItems(carousel);
+      setCategories(cats);
+      setTopProducts(products);
+    })();
   }, []);
 
   useEffect(() => {

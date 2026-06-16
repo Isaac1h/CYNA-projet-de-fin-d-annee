@@ -2,19 +2,9 @@
 
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
 import { useToast } from '@/components/ui/use-toast';
+import type { Product } from '@/lib/data';
 
 export type SubscriptionDuration = 'monthly' | 'annual' | 'per_user';
-
-export type Product = {
-  id: string;
-  name: string;
-  description: string;
-  image_url: string;
-  stock_status: string;
-  price_monthly?: number;
-  price_annual?: number;
-  price_per_user?: number;
-};
 
 export type CartItem = Product & {
   subscriptionDuration: SubscriptionDuration;
