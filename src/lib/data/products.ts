@@ -1,4 +1,4 @@
-import { getProducts as readDemoProducts } from '@/lib/demoData';
+import { demoProducts } from '@/lib/demoData';
 import type { Product, ProductQuery, StockStatus } from './types';
 
 const STOCK_ORDER: Record<StockStatus, number> = {
@@ -43,7 +43,7 @@ const compareProducts = (sort: ProductQuery['sort']) => (a: Product, b: Product)
 };
 
 export async function getProducts(query: ProductQuery = {}): Promise<Product[]> {
-  const all = normalize(readDemoProducts());
+  const all = normalize(demoProducts);
   const filtered = all.filter((product) => {
     if (query.categoryId && product.category_id !== query.categoryId) return false;
     if (query.stockStatus && query.stockStatus !== 'all' && product.stock_status !== query.stockStatus) {
@@ -56,7 +56,7 @@ export async function getProducts(query: ProductQuery = {}): Promise<Product[]> 
 }
 
 export async function getProductById(id: string): Promise<Product | null> {
-  const all = normalize(readDemoProducts());
+  const all = normalize(demoProducts);
   return all.find((product) => product.id === id) ?? null;
 }
 
