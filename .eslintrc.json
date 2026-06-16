@@ -1,0 +1,22 @@
+{
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_", "caughtErrorsIgnorePattern": "^_" }
+    ]
+  },
+  "ignorePatterns": [
+    ".next/**",
+    "node_modules/**",
+    "src/legacy/**",
+    "src/components/CallToAction.jsx",
+    "src/components/CheckoutStep*.jsx",
+    "src/components/HeroImage.jsx",
+    "src/components/LoginForm.jsx",
+    "src/components/ScrollToTop.jsx",
+    "src/components/WelcomeMessage.jsx",
+    "src/components/ui/sidebar.jsx",
+    "src/hooks/use-mobile.jsx"
+  ]
+}
