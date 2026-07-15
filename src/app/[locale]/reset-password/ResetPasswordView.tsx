@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { AlertTriangle, Check, CheckCircle2, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { PasswordInput } from '@/components/ui/password-input';
 import { supabase } from '@/lib/supabase';
 import { evaluatePassword, RULE_LABELS } from '@/features/auth/passwordStrength';
 
@@ -213,10 +214,9 @@ export default function ResetPasswordView() {
                   *
                 </span>
               </label>
-              <input
+              <PasswordInput
                 ref={passwordInputRef}
                 id="reset-password"
-                type="password"
                 autoComplete="new-password"
                 required
                 value={password}
@@ -286,9 +286,8 @@ export default function ResetPasswordView() {
                   *
                 </span>
               </label>
-              <input
+              <PasswordInput
                 id="reset-confirm"
-                type="password"
                 autoComplete="new-password"
                 required
                 value={confirm}

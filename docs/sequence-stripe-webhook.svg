@@ -1,0 +1,291 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1300" width="1400" height="1300" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="1300" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="700" y="42" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">
+    Diagramme de séquence — webhook de paiement réussi
+  </text>
+  <text x="700" y="66" text-anchor="middle" font-size="13" fill="#64748b">
+    Nominal + branches d'échec anticipé (signature invalide, événement déjà traité)
+  </text>
+
+  <!-- ============ ACTORS ============ -->
+  <g id="actor-client">
+    <rect x="80" y="90" width="200" height="60" rx="8" fill="#f1f5f9" stroke="#475569" stroke-width="2"/>
+    <text x="180" y="118" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">Client</text>
+    <text x="180" y="137" text-anchor="middle" font-size="11" fill="#475569">(navigateur)</text>
+  </g>
+
+  <g id="actor-stripe">
+    <rect x="450" y="90" width="200" height="60" rx="8" fill="#e2e8f0" stroke="#334155" stroke-width="2"/>
+    <text x="550" y="118" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">Stripe Checkout</text>
+    <text x="550" y="137" text-anchor="middle" font-size="11" fill="#475569">(service externe)</text>
+  </g>
+
+  <g id="actor-rh">
+    <rect x="820" y="90" width="200" height="60" rx="8" fill="#eff6ff" stroke="#1e40af" stroke-width="2"/>
+    <text x="920" y="116" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">Route Handler</text>
+    <text x="920" y="135" text-anchor="middle" font-size="11" fill="#1e40af">/api/webhooks/stripe</text>
+  </g>
+
+  <g id="actor-supabase">
+    <rect x="1150" y="90" width="200" height="60" rx="8" fill="#dbeafe" stroke="#1e40af" stroke-width="2"/>
+    <text x="1250" y="118" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">Supabase</text>
+    <text x="1250" y="137" text-anchor="middle" font-size="11" fill="#1e40af">PostgreSQL + RPC</text>
+  </g>
+
+  <!-- ============ LIFELINES (dashed) ============ -->
+  <line x1="180" y1="150" x2="180" y2="1130" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <line x1="550" y1="150" x2="550" y2="1130" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <line x1="920" y1="150" x2="920" y2="1130" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <line x1="1250" y1="150" x2="1250" y2="1130" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 5"/>
+
+  <!-- ============ ACTIVATION BAR ON ROUTE HANDLER ============ -->
+  <rect x="914" y="310" width="12" height="720" fill="#dbeafe" stroke="#1e40af" stroke-width="1"/>
+
+  <!-- ============ SUPABASE ACTIVATION SLIVERS ============ -->
+  <rect x="1244" y="485" width="12" height="45" fill="#dbeafe" stroke="#1e40af" stroke-width="1"/>
+  <rect x="1244" y="640" width="12" height="45" fill="#dbeafe" stroke="#1e40af" stroke-width="1"/>
+  <rect x="1244" y="710" width="12" height="20" fill="#dbeafe" stroke="#1e40af" stroke-width="1"/>
+  <rect x="1244" y="755" width="12" height="20" fill="#dbeafe" stroke="#1e40af" stroke-width="1"/>
+  <rect x="1244" y="845" width="12" height="45" fill="#dbeafe" stroke="#1e40af" stroke-width="1"/>
+
+  <!-- ==================================================================
+       SECTION A — Client ⇄ Stripe (paiement)
+       ================================================================== -->
+
+  <!-- Msg 1: Client → Stripe -->
+  <line x1="185" y1="180" x2="545" y2="180" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="215" y="163" width="300" height="16" rx="3" fill="#f8fafc"/>
+  <text x="365" y="176" text-anchor="middle" font-size="12" font-weight="600" fill="#0f172a">
+    1. Paiement (saisie carte sur page hébergée Stripe)
+  </text>
+
+  <!-- Msg 2: Stripe → Client (dashed return) -->
+  <line x1="545" y1="220" x2="185" y2="220" stroke="#334155" stroke-width="2" stroke-dasharray="6 3" marker-end="url(#arrow)"/>
+  <rect x="235" y="203" width="260" height="16" rx="3" fill="#f8fafc"/>
+  <text x="365" y="216" text-anchor="middle" font-size="12" font-weight="600" fill="#0f172a">
+    2. Redirection vers /checkout/success
+  </text>
+
+  <!-- Note: carte jamais côté app -->
+  <g id="note-carte">
+    <rect x="90" y="245" width="560" height="40" rx="4" fill="#f1f5f9" stroke="#64748b" stroke-width="1"/>
+    <text x="370" y="269" text-anchor="middle" font-size="11" font-style="italic" fill="#334155">
+      Note — La carte bancaire ne transite JAMAIS par l'application
+    </text>
+    <text x="370" y="281" text-anchor="middle" font-size="10" fill="#64748b">
+      (Stripe Checkout hébergé, PCI-DSS délégué)
+    </text>
+  </g>
+
+  <!-- ==================================================================
+       SECTION B — Stripe → Route Handler (webhook + validation)
+       ================================================================== -->
+
+  <!-- Msg 3: Stripe → RH (POST webhook) -->
+  <line x1="555" y1="310" x2="912" y2="310" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="595" y="285" width="280" height="20" rx="3" fill="#f8fafc"/>
+  <text x="735" y="298" text-anchor="middle" font-size="12" font-weight="600" fill="#0f172a">
+    3. POST webhook (signé)
+  </text>
+  <text x="735" y="302" text-anchor="middle" font-size="11" fill="#334155" opacity="0"></text>
+  <text x="735" y="330" text-anchor="middle" font-size="10" fill="#475569" font-style="italic">
+    event: checkout.session.completed
+  </text>
+
+  <!-- Self-message on RH: vérif signature -->
+  <path d="M 926 350 H 1000 V 372 H 926" stroke="#334155" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <rect x="770" y="345" width="150" height="18" rx="3" fill="#f8fafc"/>
+  <text x="915" y="358" text-anchor="end" font-size="11" font-weight="600" fill="#0f172a">
+    4a. Vérif signature HMAC
+  </text>
+  <text x="915" y="376" text-anchor="end" font-size="10" fill="#475569" font-style="italic">
+    (STRIPE_WEBHOOK_SECRET)
+  </text>
+
+  <!-- ============ OPT FRAME 1 : signature invalide ============ -->
+  <g id="opt-frame-1">
+    <rect x="65" y="395" width="1290" height="70" fill="none" stroke="#64748b" stroke-width="1.5"/>
+    <!-- Header pentagon-ish -->
+    <path d="M 65 395 L 145 395 L 155 407 L 155 415 L 65 415 Z" fill="#dbeafe" stroke="#1e40af" stroke-width="1"/>
+    <text x="80" y="410" font-size="11" font-weight="700" fill="#1e3a8a">opt</text>
+    <text x="165" y="410" font-size="11" font-weight="600" fill="#0f172a" font-style="italic">
+      [signature invalide]
+    </text>
+
+    <!-- Message inside frame : RH → Stripe (400) -->
+    <line x1="912" y1="443" x2="555" y2="443" stroke="#334155" stroke-width="2" stroke-dasharray="6 3" marker-end="url(#arrow)"/>
+    <rect x="600" y="428" width="280" height="16" rx="3" fill="#f8fafc"/>
+    <text x="740" y="440" text-anchor="middle" font-size="12" font-weight="600" fill="#b91c1c">
+      HTTP 400 — invalid signature
+    </text>
+    <text x="740" y="459" text-anchor="middle" font-size="10" fill="#475569" font-style="italic">
+      Aucune commande créée · Stripe stoppe les retries
+    </text>
+  </g>
+
+  <!-- ==================================================================
+       Idempotence — INSERT stripe_events (unique PK)
+       ================================================================== -->
+
+  <!-- Msg RH → Supabase : INSERT stripe_events -->
+  <line x1="926" y1="497" x2="1244" y2="497" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="985" y="482" width="260" height="16" rx="3" fill="#f8fafc"/>
+  <text x="1115" y="494" text-anchor="middle" font-size="12" font-weight="600" fill="#0f172a">
+    4b. INSERT INTO stripe_events(id, type, livemode)
+  </text>
+
+  <!-- Msg return dashed -->
+  <line x1="1244" y1="525" x2="926" y2="525" stroke="#334155" stroke-width="2" stroke-dasharray="6 3" marker-end="url(#arrow)"/>
+  <rect x="985" y="510" width="260" height="16" rx="3" fill="#f8fafc"/>
+  <text x="1115" y="522" text-anchor="middle" font-size="11" fill="#0f172a">
+    OK  |  23505 (déjà présent — replay)
+  </text>
+
+  <!-- ============ OPT FRAME 2 : event déjà traité ============ -->
+  <g id="opt-frame-2">
+    <rect x="65" y="550" width="1290" height="70" fill="none" stroke="#64748b" stroke-width="1.5"/>
+    <path d="M 65 550 L 195 550 L 205 562 L 205 570 L 65 570 Z" fill="#dbeafe" stroke="#1e40af" stroke-width="1"/>
+    <text x="80" y="565" font-size="11" font-weight="700" fill="#1e3a8a">opt</text>
+    <text x="215" y="565" font-size="11" font-weight="600" fill="#0f172a" font-style="italic">
+      [event déjà traité — code 23505 sur stripe_events.id]
+    </text>
+
+    <line x1="912" y1="598" x2="555" y2="598" stroke="#334155" stroke-width="2" stroke-dasharray="6 3" marker-end="url(#arrow)"/>
+    <rect x="600" y="583" width="290" height="16" rx="3" fill="#f8fafc"/>
+    <text x="745" y="595" text-anchor="middle" font-size="12" font-weight="600" fill="#0369a1">
+      HTTP 200 — { received: true, idempotent: true }
+    </text>
+    <text x="745" y="614" text-anchor="middle" font-size="10" fill="#475569" font-style="italic">
+      Court-circuit — aucun doublon en base
+    </text>
+  </g>
+
+  <!-- ==================================================================
+       SECTION C — Flux nominal (event nouveau et signature valide)
+       ================================================================== -->
+
+  <!-- Séparateur label -->
+  <rect x="65" y="642" width="1290" height="0" fill="none"/>
+  <text x="80" y="638" font-size="11" font-weight="700" font-style="italic" fill="#64748b">
+    ↓  Flux nominal (signature valide + event nouveau)  ↓
+  </text>
+
+  <!-- Msg RH → Supabase : RPC place_order_for_user -->
+  <line x1="926" y1="655" x2="1244" y2="655" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="960" y="647" width="300" height="16" rx="3" fill="#f8fafc"/>
+  <text x="1110" y="659" text-anchor="middle" font-size="12" font-weight="600" fill="#0f172a">
+    5. RPC place_order_for_user(user_id, items, session_id, ...)
+  </text>
+
+  <!-- Msg return dashed : commande créée -->
+  <line x1="1244" y1="682" x2="926" y2="682" stroke="#334155" stroke-width="2" stroke-dasharray="6 3" marker-end="url(#arrow)"/>
+  <rect x="985" y="667" width="260" height="16" rx="3" fill="#f8fafc"/>
+  <text x="1115" y="679" text-anchor="middle" font-size="11" fill="#0f172a">
+    Commande créée (id, order_number)
+  </text>
+
+  <!-- Msg RH → Supabase : UPDATE stripe_invoice_id -->
+  <line x1="926" y1="720" x2="1244" y2="720" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="975" y="705" width="260" height="16" rx="3" fill="#f8fafc"/>
+  <text x="1105" y="717" text-anchor="middle" font-size="12" font-weight="600" fill="#0f172a">
+    6. UPDATE orders.stripe_invoice_id
+  </text>
+
+  <!-- Msg RH → Supabase : UPDATE total_amount -->
+  <line x1="926" y1="765" x2="1244" y2="765" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="960" y="750" width="290" height="16" rx="3" fill="#f8fafc"/>
+  <text x="1105" y="762" text-anchor="middle" font-size="12" font-weight="600" fill="#0f172a">
+    7. UPDATE orders.total_amount = amount_total
+  </text>
+
+  <!-- Note attached: montant réel -->
+  <g id="note-total">
+    <rect x="830" y="785" width="520" height="35" rx="4" fill="#f1f5f9" stroke="#64748b" stroke-width="1"/>
+    <text x="1090" y="802" text-anchor="middle" font-size="11" font-style="italic" fill="#334155">
+      Note — montant RÉELLEMENT facturé (post-réduction si code promo)
+    </text>
+    <text x="1090" y="814" text-anchor="middle" font-size="10" fill="#64748b">
+      écrase le total « catalogue » recalculé par la RPC
+    </text>
+  </g>
+
+  <!-- Msg RH → Supabase : UPDATE claim atomique -->
+  <line x1="926" y1="855" x2="1244" y2="855" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="945" y="840" width="320" height="16" rx="3" fill="#f8fafc"/>
+  <text x="1105" y="852" text-anchor="middle" font-size="12" font-weight="600" fill="#0f172a">
+    8a. UPDATE confirmation_email_sent_at (claim atomique)
+  </text>
+
+  <!-- Msg return dashed : claim ok -->
+  <line x1="1244" y1="882" x2="926" y2="882" stroke="#334155" stroke-width="2" stroke-dasharray="6 3" marker-end="url(#arrow)"/>
+  <rect x="985" y="867" width="260" height="16" rx="3" fill="#f8fafc"/>
+  <text x="1115" y="879" text-anchor="middle" font-size="11" fill="#0f172a">
+    Claim OK | 0 lignes (replay → skip send)
+  </text>
+
+  <!-- Self-message on RH : sendOrderConfirmation -->
+  <path d="M 926 918 H 1000 V 940 H 926" stroke="#334155" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <rect x="770" y="913" width="150" height="18" rx="3" fill="#f8fafc"/>
+  <text x="915" y="926" text-anchor="end" font-size="11" font-weight="600" fill="#0f172a">
+    8b. sendOrderConfirmation
+  </text>
+  <text x="915" y="944" text-anchor="end" font-size="10" fill="#475569" font-style="italic">
+    (Resend, best-effort)
+  </text>
+
+  <!-- Note best-effort mail -->
+  <g id="note-email">
+    <rect x="830" y="962" width="520" height="35" rx="4" fill="#f1f5f9" stroke="#64748b" stroke-width="1"/>
+    <text x="1090" y="979" text-anchor="middle" font-size="11" font-style="italic" fill="#334155">
+      Note — try/catch local, n'échoue JAMAIS le webhook
+    </text>
+    <text x="1090" y="991" text-anchor="middle" font-size="10" fill="#64748b">
+      une panne mail ne bloque ni la commande ni la réponse HTTP 200
+    </text>
+  </g>
+
+  <!-- Msg RH → Stripe : 200 OK final -->
+  <line x1="912" y1="1035" x2="555" y2="1035" stroke="#334155" stroke-width="2" stroke-dasharray="6 3" marker-end="url(#arrow)"/>
+  <rect x="600" y="1020" width="290" height="16" rx="3" fill="#f8fafc"/>
+  <text x="745" y="1032" text-anchor="middle" font-size="12" font-weight="700" fill="#059669">
+    9. HTTP 200 — { received: true }
+  </text>
+
+  <!-- ============ LEGEND ============ -->
+  <g id="legend">
+    <rect x="60" y="1160" width="1280" height="115" rx="8" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <text x="80" y="1183" font-size="12" font-weight="700" fill="#0f172a">Conventions</text>
+
+    <line x1="80" y1="1204" x2="130" y2="1204" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="140" y="1208" font-size="11" fill="#334155">appel synchrone (message)</text>
+
+    <line x1="360" y1="1204" x2="410" y2="1204" stroke="#334155" stroke-width="2" stroke-dasharray="6 3" marker-end="url(#arrow)"/>
+    <text x="420" y="1208" font-size="11" fill="#334155">retour (dashed)</text>
+
+    <rect x="600" y="1198" width="12" height="14" fill="#dbeafe" stroke="#1e40af" stroke-width="1"/>
+    <text x="620" y="1208" font-size="11" fill="#334155">activation (traitement en cours)</text>
+
+    <line x1="880" y1="1204" x2="930" y2="1204" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 5"/>
+    <text x="940" y="1208" font-size="11" fill="#334155">ligne de vie (idle)</text>
+
+    <rect x="1080" y="1197" width="30" height="16" fill="none" stroke="#64748b" stroke-width="1.5"/>
+    <path d="M 1080 1197 L 1102 1197 L 1108 1204 L 1108 1210 L 1080 1210 Z" fill="#dbeafe" stroke="#1e40af" stroke-width="1"/>
+    <text x="1120" y="1208" font-size="11" fill="#334155">opt [guard] — branche optionnelle</text>
+
+    <text x="80" y="1240" font-size="11" fill="#334155">
+      ▸ Deux points de sortie anticipée : signature invalide → 400 (aucune écriture) · replay Stripe → 200 idempotent (aucun doublon)
+    </text>
+    <text x="80" y="1258" font-size="11" fill="#334155">
+      ▸ L'envoi d'e-mail est best-effort — une panne Resend ne remonte pas au handler et ne provoque pas de retry Stripe
+    </text>
+  </g>
+</svg>

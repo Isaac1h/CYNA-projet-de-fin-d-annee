@@ -7,7 +7,9 @@
     "save": "Save",
     "back": "Back",
     "next": "Next",
-    "previous": "Previous"
+    "previous": "Previous",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password"
   },
   "nav": {
     "primaryNav": "Primary navigation",
@@ -687,37 +689,6 @@
         "messageRequired": "Message is required.",
         "messageTooShort": "Message must be at least {min} characters.",
         "messageTooLong": "Message must be at most {max} characters."
-      }
-    },
-    "chatbot": {
-      "sectionHeading": "Online assistant",
-      "sectionSubheading": "A quick question? Start a chat with the assistant. For a specific case, the contact form is the safer route.",
-      "bullet1": "· Available UI-side only for now.",
-      "bullet2": "· Preset answers on SOC / EDR / XDR and pricing.",
-      "bullet3": "· Escalation to a human agent goes through the form.",
-      "cta": "Contact us",
-      "dialogTitle": "Cyna Assistant",
-      "closeOverlay": "Close chat window",
-      "closeButton": "Close chat",
-      "srUserPrefix": "You: ",
-      "srBotPrefix": "Assistant: ",
-      "suggestionsLabel": "Suggestions:",
-      "inputLabel": "Your message",
-      "inputPlaceholder": "Type your question…",
-      "sendLabel": "Send message",
-      "greeting": "Hi! I'm the Cyna assistant. I can answer a few common questions. For a specific case, open a ticket via the form.",
-      "defaultAnswer": "I don't have the exact answer. An agent will reply quickly — use the contact form on the left to describe your need.",
-      "suggestions": {
-        "soc": "What is the SOC?",
-        "edr": "How do I enable EDR?",
-        "pricing": "What are the pricing options?"
-      },
-      "faq": {
-        "soc": "The SOC (Security Operations Center) is a team and a platform that monitor your systems 24/7 and respond to incidents.",
-        "edr": "EDR (Endpoint Detection & Response) protects your workstations and servers: behavioral detection, isolation, remediation.",
-        "xdr": "XDR correlates signals from multiple surfaces (endpoint, network, cloud, identity) for more contextual detection.",
-        "pricing": "Each service is available monthly, annually and per user. Details are on the product page in the catalog.",
-        "invoice": "Invoices are available in /orders. PDF download is coming with the Supabase integration."
       }
     }
   },

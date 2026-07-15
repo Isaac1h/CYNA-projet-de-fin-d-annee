@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 750" width="1600" height="750" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+    </marker>
+    <marker id="arrow-loop" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="750" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="800" y="42" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">
+    Flux de livraison — processus manuel par fonctionnalité
+  </text>
+  <text x="800" y="68" text-anchor="middle" font-size="13" fill="#64748b">
+    Une pull request = une préoccupation · validation explicite avant application · pas de pipeline automatisé
+  </text>
+
+  <!-- ============ CHECKPOINT BADGE ABOVE STEP 3 ============ -->
+  <g id="checkpoint-badge">
+    <rect x="490" y="260" width="200" height="28" rx="14" fill="#1e3a8a" stroke="#1e3a8a" stroke-width="1"/>
+    <text x="590" y="279" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">
+      ★  POINT DE CONTRÔLE CLÉ
+    </text>
+    <!-- Small triangular tail pointing down toward Step 3 -->
+    <polygon points="580,288 600,288 590,300" fill="#1e3a8a"/>
+  </g>
+
+  <!-- ============ STEPS ROW ============ -->
+
+  <!-- STEP 1 : Cadrage -->
+  <g id="step-1">
+    <rect x="95" y="315" width="170" height="130" rx="10" fill="#eff6ff" stroke="#1e40af" stroke-width="1.5"/>
+    <circle cx="180" cy="337" r="14" fill="#1e3a8a"/>
+    <text x="180" y="342" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">1</text>
+    <text x="180" y="373" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">Cadrage</text>
+    <text x="180" y="400" text-anchor="middle" font-size="11" fill="#334155">Fonctionnalité ou</text>
+    <text x="180" y="416" text-anchor="middle" font-size="11" fill="#334155">correctif défini</text>
+    <text x="180" y="434" text-anchor="middle" font-size="10" fill="#64748b" font-style="italic">1 PR = 1 préoccupation</text>
+  </g>
+
+  <!-- STEP 2 : Branche dédiée -->
+  <g id="step-2">
+    <rect x="295" y="315" width="170" height="130" rx="10" fill="#eff6ff" stroke="#1e40af" stroke-width="1.5"/>
+    <circle cx="380" cy="337" r="14" fill="#1e3a8a"/>
+    <text x="380" y="342" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">2</text>
+    <text x="380" y="373" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">Branche dédiée</text>
+    <text x="380" y="400" text-anchor="middle" font-size="11" fill="#334155">Développement sur</text>
+    <text x="380" y="416" text-anchor="middle" font-size="11" fill="#334155">branche Git isolée</text>
+    <text x="380" y="434" text-anchor="middle" font-size="10" fill="#64748b" font-style="italic">feature/*  ·  fix/*</text>
+  </g>
+
+  <!-- STEP 3 : Revue du diff — HIGHLIGHTED -->
+  <g id="step-3">
+    <rect x="495" y="305" width="190" height="150" rx="10" fill="#dbeafe" stroke="#1e40af" stroke-width="2.5"/>
+    <circle cx="590" cy="327" r="14" fill="#1e3a8a"/>
+    <text x="590" y="332" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">3</text>
+    <text x="590" y="363" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">Revue du diff</text>
+    <text x="590" y="390" text-anchor="middle" font-size="11" fill="#0f172a" font-weight="600">Code + diff SQL relus</text>
+    <text x="590" y="408" text-anchor="middle" font-size="11" fill="#0f172a" font-weight="600">AVANT application</text>
+    <text x="590" y="428" text-anchor="middle" font-size="10" fill="#334155" font-style="italic">RLS, droits, contraintes</text>
+    <text x="590" y="446" text-anchor="middle" font-size="10" fill="#334155" font-style="italic">vérifiés à l'œil</text>
+  </g>
+
+  <!-- STEP 4 : Application -->
+  <g id="step-4">
+    <rect x="725" y="315" width="170" height="130" rx="10" fill="#eff6ff" stroke="#1e40af" stroke-width="1.5"/>
+    <circle cx="810" cy="337" r="14" fill="#1e3a8a"/>
+    <text x="810" y="342" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">4</text>
+    <text x="810" y="373" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">Application</text>
+    <text x="810" y="400" text-anchor="middle" font-size="11" fill="#334155">Migration appliquée</text>
+    <text x="810" y="416" text-anchor="middle" font-size="11" fill="#334155">après validation explicite</text>
+    <text x="810" y="434" text-anchor="middle" font-size="10" fill="#64748b" font-style="italic">merge côté code</text>
+  </g>
+
+  <!-- STEP 5 : Tests -->
+  <g id="step-5">
+    <rect x="925" y="315" width="170" height="130" rx="10" fill="#eff6ff" stroke="#1e40af" stroke-width="1.5"/>
+    <circle cx="1010" cy="337" r="14" fill="#1e3a8a"/>
+    <text x="1010" y="342" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">5</text>
+    <text x="1010" y="373" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">Tests</text>
+    <text x="1010" y="400" text-anchor="middle" font-size="11" fill="#334155">Vérif manuelle navigateur</text>
+    <text x="1010" y="416" text-anchor="middle" font-size="11" fill="#334155">+ scripts Node</text>
+    <text x="1010" y="434" text-anchor="middle" font-size="10" fill="#64748b" font-style="italic">base en lecture seule</text>
+  </g>
+
+  <!-- STEP 6 : Référentiel -->
+  <g id="step-6">
+    <rect x="1125" y="315" width="170" height="130" rx="10" fill="#eff6ff" stroke="#1e40af" stroke-width="1.5"/>
+    <circle cx="1210" cy="337" r="14" fill="#1e3a8a"/>
+    <text x="1210" y="342" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">6</text>
+    <text x="1210" y="373" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">Référentiel</text>
+    <text x="1210" y="400" text-anchor="middle" font-size="11" fill="#334155">CLAUDE.md mis à jour :</text>
+    <text x="1210" y="416" text-anchor="middle" font-size="11" fill="#334155">décisions, dettes</text>
+    <text x="1210" y="434" text-anchor="middle" font-size="10" fill="#64748b" font-style="italic">source de vérité archi</text>
+  </g>
+
+  <!-- STEP 7 : Déploiement manuel -->
+  <g id="step-7">
+    <rect x="1335" y="315" width="170" height="130" rx="10" fill="#eff6ff" stroke="#1e40af" stroke-width="1.5"/>
+    <circle cx="1420" cy="337" r="14" fill="#1e3a8a"/>
+    <text x="1420" y="342" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">7</text>
+    <text x="1420" y="373" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">Déploiement</text>
+    <text x="1420" y="400" text-anchor="middle" font-size="11" fill="#334155">Mise en ligne humaine</text>
+    <text x="1420" y="416" text-anchor="middle" font-size="11" fill="#334155">pas d'auto-deploy</text>
+    <text x="1420" y="434" text-anchor="middle" font-size="10" fill="#64748b" font-style="italic">contrôle final avant prod</text>
+  </g>
+
+  <!-- ============ PROGRESSION ARROWS ============ -->
+
+  <!-- 1 → 2 -->
+  <line x1="268" y1="380" x2="292" y2="380" stroke="#334155" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <!-- 2 → 3 -->
+  <line x1="468" y1="380" x2="492" y2="380" stroke="#334155" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <!-- 3 → 4 -->
+  <line x1="688" y1="380" x2="722" y2="380" stroke="#334155" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <!-- 4 → 5 -->
+  <line x1="898" y1="380" x2="922" y2="380" stroke="#334155" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <!-- 5 → 6 -->
+  <line x1="1098" y1="380" x2="1122" y2="380" stroke="#334155" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <!-- 6 → 7 -->
+  <line x1="1298" y1="380" x2="1332" y2="380" stroke="#334155" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- ============ LOOP-BACK ARROW (Tests échoué → correction) ============ -->
+  <g id="loop-back">
+    <path d="M 1010 445 C 1010 610, 380 610, 380 445"
+          stroke="#64748b" stroke-width="2.5" stroke-dasharray="8 4" fill="none"
+          marker-end="url(#arrow-loop)"/>
+
+    <!-- Opaque backdrop for the label -->
+    <rect x="490" y="588" width="410" height="34" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+    <text x="695" y="606" text-anchor="middle" font-size="12" font-weight="700" fill="#475569">
+      si les tests échouent  →  correction
+    </text>
+    <text x="695" y="619" text-anchor="middle" font-size="10" font-style="italic" fill="#64748b">
+      retour branche / nouvelle revue avant réapplication
+    </text>
+  </g>
+
+  <!-- ============ LEGEND / KEY POINTS ============ -->
+  <g id="legend">
+    <rect x="60" y="660" width="1480" height="70" rx="8" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <text x="80" y="683" font-size="12" font-weight="700" fill="#0f172a">Principes du processus</text>
+    <text x="80" y="703" font-size="11" fill="#334155">
+      ▸ Séquence à validation : chaque étape passe un contrôle avant la suivante  ·  aucune migration n'est appliquée sans relecture explicite du diff SQL
+    </text>
+    <text x="80" y="721" font-size="11" fill="#334155">
+      ▸ Rigueur = protocole humain systématique, pas outillage automatisé  ·  la boucle de retour est déclenchée à chaque échec de test, sans exception
+    </text>
+  </g>
+</svg>

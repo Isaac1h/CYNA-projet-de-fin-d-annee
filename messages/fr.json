@@ -7,7 +7,9 @@
     "save": "Enregistrer",
     "back": "Retour",
     "next": "Suivant",
-    "previous": "Précédent"
+    "previous": "Précédent",
+    "showPassword": "Afficher le mot de passe",
+    "hidePassword": "Masquer le mot de passe"
   },
   "nav": {
     "primaryNav": "Navigation principale",
@@ -687,37 +689,6 @@
         "messageRequired": "Le message est requis.",
         "messageTooShort": "Le message doit faire au moins {min} caractères.",
         "messageTooLong": "Le message doit faire au plus {max} caractères."
-      }
-    },
-    "chatbot": {
-      "sectionHeading": "Assistant en ligne",
-      "sectionSubheading": "Une question rapide ? Démarrez une discussion avec l'assistant. Pour un cas précis, le formulaire de contact reste la voie la plus sûre.",
-      "bullet1": "· Disponible côté UI uniquement pour le moment.",
-      "bullet2": "· Réponses prédéfinies sur SOC / EDR / XDR et tarifs.",
-      "bullet3": "· L'escalade vers un agent humain passe par le formulaire.",
-      "cta": "Contactez-nous",
-      "dialogTitle": "Assistant Cyna",
-      "closeOverlay": "Fermer la fenêtre de discussion",
-      "closeButton": "Fermer la discussion",
-      "srUserPrefix": "Vous : ",
-      "srBotPrefix": "Assistant : ",
-      "suggestionsLabel": "Suggestions :",
-      "inputLabel": "Votre message",
-      "inputPlaceholder": "Tapez votre question…",
-      "sendLabel": "Envoyer le message",
-      "greeting": "Bonjour ! Je suis l'assistant Cyna. Je peux répondre à quelques questions courantes. Pour un cas précis, ouvrez un ticket via le formulaire.",
-      "defaultAnswer": "Je n'ai pas la réponse exacte. Un agent vous répondra rapidement — utilisez le formulaire de contact à gauche pour décrire votre besoin.",
-      "suggestions": {
-        "soc": "Qu'est-ce que le SOC ?",
-        "edr": "Comment activer l'EDR ?",
-        "pricing": "Quelles sont les options de tarification ?"
-      },
-      "faq": {
-        "soc": "Le SOC (Security Operations Center) est une équipe et une plateforme qui surveillent vos systèmes 24/7 et réagissent aux incidents.",
-        "edr": "L'EDR (Endpoint Detection & Response) protège vos postes et serveurs : détection comportementale, isolation, remédiation.",
-        "xdr": "Le XDR corrèle les signaux de plusieurs surfaces (endpoint, réseau, cloud, identité) pour une détection plus contextuelle.",
-        "pricing": "Chaque service propose mensuel, annuel et par utilisateur. Le détail est sur la fiche produit du catalogue.",
-        "invoice": "Les factures sont disponibles dans /orders. Le téléchargement PDF arrive avec le branchement Supabase."
       }
     }
   },

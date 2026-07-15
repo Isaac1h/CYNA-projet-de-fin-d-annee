@@ -3,11 +3,17 @@
 import { useState, type FormEvent } from 'react';
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
+import { PasswordInput } from '@/components/ui/password-input';
 import { useAuth } from '@/context/AuthContext';
 import { validateEmail, validatePassword } from '@/lib/auth';
 
 export default function PersonalInfoSection() {
   const t = useTranslations('account.personal');
+  const tCommon = useTranslations('common');
+  const passwordToggleLabels = {
+    showLabel: tCommon('showPassword'),
+    hideLabel: tCommon('hidePassword'),
+  };
   const { currentUser, updateProfile, updatePassword } = useAuth();
   const [fullName, setFullName] = useState(currentUser?.full_name ?? '');
   const [email, setEmail] = useState(currentUser?.email ?? '');
@@ -149,13 +155,13 @@ export default function PersonalInfoSection() {
             <label htmlFor="account-current-password" className="mb-1 block text-sm font-medium text-foreground">
               {t('password.current')}
             </label>
-            <input
+            <PasswordInput
               id="account-current-password"
-              type="password"
               autoComplete="current-password"
               value={currentPassword}
               onChange={(event) => setCurrentPassword(event.target.value)}
               className="w-full rounded-md border border-input bg-background px-3 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+              {...passwordToggleLabels}
             />
           </div>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -163,23 +169,22 @@ export default function PersonalInfoSection() {
               <label htmlFor="account-new-password" className="mb-1 block text-sm font-medium text-foreground">
                 {t('password.new')}
               </label>
-              <input
+              <PasswordInput
                 id="account-new-password"
-                type="password"
                 autoComplete="new-password"
                 value={newPassword}
                 onChange={(event) => setNewPassword(event.target.value)}
                 aria-describedby="account-password-rules"
                 className="w-full rounded-md border border-input bg-background px-3 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                {...passwordToggleLabels}
               />
             </div>
             <div>
               <label htmlFor="account-confirm-password" className="mb-1 block text-sm font-medium text-foreground">
                 {t('password.confirm')}
               </label>
-              <input
+              <PasswordInput
                 id="account-confirm-password"
-                type="password"
                 autoComplete="new-password"
                 value={confirmPassword}
                 onChange={(event) => setConfirmPassword(event.target.value)}
@@ -188,6 +193,7 @@ export default function PersonalInfoSection() {
                   confirmPassword.length > 0 && !passwordsMatch ? 'account-password-mismatch' : undefined
                 }
                 className="w-full rounded-md border border-input bg-background px-3 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                {...passwordToggleLabels}
               />
               {confirmPassword.length > 0 && !passwordsMatch && (
                 <p id="account-password-mismatch" role="alert" className="mt-1 text-sm text-destructive">

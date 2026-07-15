@@ -3,6 +3,7 @@
 import { useMemo, useState, type FormEvent } from 'react';
 import { Check, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { PasswordInput } from '@/components/ui/password-input';
 import { useAuth } from '@/context/AuthContext';
 import { validateEmail } from '@/lib/auth';
 import { RULE_LABELS, evaluatePassword } from './passwordStrength';
@@ -110,9 +111,8 @@ export default function RegisterForm({ onSuccess }: Props) {
         <label htmlFor="register-password" className="mb-1 block text-sm font-medium text-foreground">
           Mot de passe
         </label>
-        <input
+        <PasswordInput
           id="register-password"
-          type="password"
           autoComplete="new-password"
           required
           value={password}
@@ -176,9 +176,8 @@ export default function RegisterForm({ onSuccess }: Props) {
         <label htmlFor="register-confirm" className="mb-1 block text-sm font-medium text-foreground">
           Confirmer le mot de passe
         </label>
-        <input
+        <PasswordInput
           id="register-confirm"
-          type="password"
           autoComplete="new-password"
           required
           value={confirm}

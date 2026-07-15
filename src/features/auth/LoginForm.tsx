@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { PasswordInput } from '@/components/ui/password-input';
 import { useAuth } from '@/context/AuthContext';
 import { validateEmail } from '@/lib/auth';
 
@@ -69,9 +70,8 @@ export default function LoginForm({ onSuccess }: Props) {
           <label htmlFor="login-password" className="mb-1 block text-sm font-medium text-foreground">
             Mot de passe
           </label>
-          <input
+          <PasswordInput
             id="login-password"
-            type="password"
             autoComplete="current-password"
             required
             value={password}

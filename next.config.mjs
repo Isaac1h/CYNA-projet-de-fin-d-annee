@@ -23,19 +23,20 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
  */
 const csp = [
   "default-src 'self'",
-  // Stripe.js (Elements + hosted Checkout redirect) is loaded in the browser.
-  `script-src 'self' 'unsafe-inline' https://js.stripe.com${isDev ? " 'unsafe-eval'" : ''}`,
+  // Stripe later: append https://js.stripe.com when Checkout/Elements lands.
+  `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ''}`,
   "style-src 'self' 'unsafe-inline'",
   // Catalogue uses Unsplash; data:/blob: cover SVG masks, blurred placeholders
   // and the future Supabase Storage bucket for product images.
   "img-src 'self' data: blob: https://images.unsplash.com https://*.supabase.co",
   "font-src 'self' data:",
-  // Supabase REST + Auth over HTTPS, realtime over WSS. Stripe API for Elements.
-  "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://api.stripe.com",
+  // Supabase REST + Auth over HTTPS, realtime over WSS.
+  // Stripe later: append https://api.stripe.com.
+  "connect-src 'self' https://*.supabase.co wss://*.supabase.co",
   // Anti-clickjacking; redundant with X-Frame-Options but covers modern browsers.
   "frame-ancestors 'none'",
-  // Stripe Elements + 3-D Secure render inside Stripe-hosted iframes.
-  "frame-src 'self' https://js.stripe.com https://hooks.stripe.com",
+  // Stripe Checkout later: replace with "frame-src https://js.stripe.com https://hooks.stripe.com".
+  "frame-src 'self'",
   "base-uri 'self'",
   "form-action 'self'",
   "object-src 'none'",

@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+    </marker>
+    <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0369a1"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="900" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="700" y="42" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">
+    Architecture globale — CYNA
+  </text>
+  <text x="700" y="68" text-anchor="middle" font-size="14" fill="#64748b">
+    E-commerce SaaS cybersécurité · Next.js 14 · Supabase · Stripe
+  </text>
+
+  <!-- ===================== CLIENT ===================== -->
+  <g id="client">
+    <rect x="60" y="380" width="200" height="140" rx="10" fill="#f1f5f9" stroke="#475569" stroke-width="2"/>
+    <text x="160" y="430" text-anchor="middle" font-size="18" font-weight="600" fill="#0f172a">Navigateur</text>
+    <text x="160" y="452" text-anchor="middle" font-size="14" fill="#475569">(client)</text>
+    <text x="160" y="490" text-anchor="middle" font-size="12" fill="#64748b">Utilisateur final</text>
+  </g>
+
+  <!-- ===================== APPLICATION NEXT.JS ===================== -->
+  <g id="app">
+    <rect x="370" y="150" width="560" height="620" rx="14" fill="#eff6ff" stroke="#1e3a8a" stroke-width="2"/>
+    <text x="650" y="185" text-anchor="middle" font-size="18" font-weight="700" fill="#1e3a8a">
+      Application Next.js 14 (App Router)
+    </text>
+
+    <!-- Middleware -->
+    <rect x="400" y="210" width="500" height="60" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+    <text x="650" y="238" text-anchor="middle" font-size="14" font-weight="600" fill="#0c4a6e">Middleware</text>
+    <text x="650" y="258" text-anchor="middle" font-size="12" fill="#0369a1">Contrôle d'accès admin — AAL2 (TOTP) obligatoire sur /admin/*</text>
+
+    <!-- Rendu RSC / ISR -->
+    <rect x="400" y="300" width="500" height="180" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="650" y="330" text-anchor="middle" font-size="14" font-weight="600" fill="#0f172a">
+      Rendu — React Server Components + ISR
+    </text>
+    <text x="650" y="355" text-anchor="middle" font-size="12" fill="#475569">Pages publiques : catalogue, produits, home, /a-propos</text>
+    <text x="650" y="375" text-anchor="middle" font-size="12" fill="#475569">Back-office /admin : dashboard, CRUD, journal d'audit</text>
+    <text x="650" y="395" text-anchor="middle" font-size="12" fill="#475569">Espace compte : commandes, abonnements, méthodes de paiement</text>
+    <text x="650" y="420" text-anchor="middle" font-size="11" fill="#94a3b8" font-style="italic">Cache ISR revalidé après mutations admin</text>
+
+    <!-- Route Handlers -->
+    <rect x="400" y="510" width="500" height="240" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="650" y="540" text-anchor="middle" font-size="14" font-weight="600" fill="#0f172a">
+      Route Handlers /api/* (BFF)
+    </text>
+    <text x="650" y="565" text-anchor="middle" font-size="12" fill="#475569">Orchestration · validation · gardes d'autorisation</text>
+    <text x="650" y="585" text-anchor="middle" font-size="12" fill="#475569">/api/admin/* — mutations CRUD (guard requireAdminAAL2)</text>
+    <text x="650" y="605" text-anchor="middle" font-size="12" fill="#475569">/api/checkout/session — création session Stripe Checkout</text>
+    <text x="650" y="625" text-anchor="middle" font-size="12" fill="#475569">/api/account/* — profil, adresses, cartes, abonnements</text>
+
+    <!-- Webhook subblock highlighted -->
+    <rect x="430" y="655" width="440" height="80" rx="6" fill="#f0f9ff" stroke="#0369a1" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="650" y="678" text-anchor="middle" font-size="13" font-weight="700" fill="#0c4a6e">
+      /api/webhooks/stripe
+    </text>
+    <text x="650" y="697" text-anchor="middle" font-size="11" fill="#0369a1">Vérif signature HMAC · idempotence · appel RPC</text>
+    <text x="650" y="715" text-anchor="middle" font-size="11" fill="#0369a1" font-style="italic">
+      Route Handler Next.js — PAS d'Edge Function séparée
+    </text>
+  </g>
+
+  <!-- ===================== SUPABASE ===================== -->
+  <g id="supabase">
+    <rect x="1030" y="140" width="330" height="290" rx="12" fill="#dbeafe" stroke="#1e40af" stroke-width="2"/>
+    <text x="1195" y="175" text-anchor="middle" font-size="18" font-weight="700" fill="#1e3a8a">Supabase</text>
+
+    <rect x="1055" y="195" width="280" height="45" rx="6" fill="#ffffff" stroke="#94a3b8"/>
+    <text x="1195" y="215" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Auth</text>
+    <text x="1195" y="231" text-anchor="middle" font-size="11" fill="#475569">JWT · TOTP / MFA (AAL2)</text>
+
+    <rect x="1055" y="253" width="280" height="45" rx="6" fill="#ffffff" stroke="#94a3b8"/>
+    <text x="1195" y="273" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">PostgreSQL</text>
+    <text x="1195" y="289" text-anchor="middle" font-size="11" fill="#475569">Catalogue · commandes · abonnements · audit</text>
+
+    <rect x="1055" y="311" width="280" height="45" rx="6" fill="#ffffff" stroke="#94a3b8"/>
+    <text x="1195" y="331" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Row Level Security (RLS)</text>
+    <text x="1195" y="347" text-anchor="middle" font-size="11" fill="#475569">Isolation par utilisateur · policies admin</text>
+
+    <rect x="1055" y="369" width="280" height="45" rx="6" fill="#ffffff" stroke="#94a3b8"/>
+    <text x="1195" y="389" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Fonctions RPC</text>
+    <text x="1195" y="405" text-anchor="middle" font-size="11" fill="#475569">SECURITY DEFINER · search_path=''</text>
+  </g>
+
+  <!-- ===================== STRIPE ===================== -->
+  <g id="stripe">
+    <rect x="1030" y="470" width="330" height="290" rx="12" fill="#e2e8f0" stroke="#334155" stroke-width="2"/>
+    <text x="1195" y="505" text-anchor="middle" font-size="18" font-weight="700" fill="#1e293b">Stripe</text>
+
+    <rect x="1055" y="525" width="280" height="45" rx="6" fill="#ffffff" stroke="#94a3b8"/>
+    <text x="1195" y="545" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Checkout hébergé</text>
+    <text x="1195" y="561" text-anchor="middle" font-size="11" fill="#475569">PCI-DSS · carte jamais côté application</text>
+
+    <rect x="1055" y="583" width="280" height="45" rx="6" fill="#ffffff" stroke="#94a3b8"/>
+    <text x="1195" y="603" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Abonnements</text>
+    <text x="1195" y="619" text-anchor="middle" font-size="11" fill="#475569">Cycle de vie · renouvellement natif</text>
+
+    <rect x="1055" y="641" width="280" height="45" rx="6" fill="#ffffff" stroke="#94a3b8"/>
+    <text x="1195" y="661" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Webhooks signés</text>
+    <text x="1195" y="677" text-anchor="middle" font-size="11" fill="#475569">Événements paiement / abonnement</text>
+
+    <rect x="1055" y="699" width="280" height="45" rx="6" fill="#ffffff" stroke="#94a3b8"/>
+    <text x="1195" y="719" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Radar</text>
+    <text x="1195" y="735" text-anchor="middle" font-size="11" fill="#475569">Détection de fraude native</text>
+  </g>
+
+  <!-- ===================== ARROWS ===================== -->
+
+  <!-- 1. Client → App (HTTP) -->
+  <line x1="262" y1="440" x2="363" y2="440" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="312" y="428" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">Requêtes HTTP</text>
+  <text x="312" y="459" text-anchor="middle" font-size="11" fill="#475569" font-style="italic">navigation, formulaires</text>
+
+  <!-- 2. App (RSC + BFF) → Supabase -->
+  <line x1="932" y1="360" x2="1025" y2="290" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="985" y="322" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">Lecture catalogue (RLS)</text>
+  <text x="985" y="338" text-anchor="middle" font-size="11" fill="#334155">Auth · appels RPC admin</text>
+
+  <!-- 3. App (BFF) → Stripe (Checkout + API) -->
+  <line x1="932" y1="600" x2="1025" y2="600" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="978" y="588" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">Création session Checkout</text>
+  <text x="978" y="618" text-anchor="middle" font-size="11" fill="#334155">API abonnements · cartes</text>
+
+  <!-- 4. Client → Stripe direct (curved over the app) -->
+  <path d="M 160 380 C 160 30, 1195 30, 1195 465" stroke="#0369a1" stroke-width="2.5" fill="none" stroke-dasharray="7 4" marker-end="url(#arrow-accent)"/>
+  <rect x="440" y="88" width="480" height="38" rx="4" fill="#f8fafc" opacity="0.95"/>
+  <text x="680" y="104" text-anchor="middle" font-size="12" font-weight="700" fill="#0c4a6e">
+    Redirection paiement — flux direct navigateur ↔ Stripe
+  </text>
+  <text x="680" y="120" text-anchor="middle" font-size="11" fill="#0369a1" font-style="italic">
+    la carte bancaire ne transite JAMAIS par l'application
+  </text>
+
+  <!-- 5. Stripe → Webhook (return) -->
+  <line x1="1025" y1="680" x2="873" y2="680" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="948" y="668" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">Webhook signé</text>
+  <text x="948" y="700" text-anchor="middle" font-size="11" fill="#475569" font-style="italic">paiement, abonnement</text>
+
+  <!-- 6. Webhook → Supabase (RPC writes) -->
+  <path d="M 870 660 C 970 660, 1000 500, 1030 415" stroke="#334155" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="972" y="500" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">Création commande</text>
+  <text x="972" y="516" text-anchor="middle" font-size="11" fill="#334155">Upsert abonnement (RPC)</text>
+
+  <!-- ===================== LEGEND ===================== -->
+  <g id="legend">
+    <rect x="60" y="795" width="1300" height="85" rx="8" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <text x="80" y="818" font-size="12" font-weight="700" fill="#0f172a">Invariants d'architecture</text>
+    <text x="80" y="838" font-size="11" fill="#334155">▸ Aucune donnée de carte bancaire ne passe par l'application — paiement délégué à Stripe Checkout hébergé (PCI-DSS)</text>
+    <text x="80" y="855" font-size="11" fill="#334155">▸ Sécurité data appliquée au niveau base — Row Level Security Supabase sur toutes les tables + RPC SECURITY DEFINER pour les mutations privilégiées</text>
+    <text x="80" y="872" font-size="11" fill="#334155">▸ Webhook Stripe implémenté en Route Handler Next.js (/api/webhooks/stripe) — pas d'Edge Function séparée à opérer</text>
+  </g>
+</svg>
